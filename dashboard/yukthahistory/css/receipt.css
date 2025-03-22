@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"poppins";
+}
+/*nav*/
+.main-content{
+    margin-left: 4%;
+    margin-right: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:30px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width:100%;
+}
+.navbar h1{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(56, 120, 189);
+    /*margin-right: 5%;
+    margin-left: 5%;*/
+    width:230px;
+}
+i{
+    font-size: 20px;
+    margin-right: 4%;
+}
+.logo{
+    width:50px;
+    object-fit: cover;
+    object-position: center;
+   /* margin-right: 10%;*/
+}
+.boxes{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:30px;
+}
+
+
+.box2{
+    max-width: 900px;
+    width:100%;
+}
+form{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:25px;
+}
+.forms{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form2{
+    width:45%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:10px;
+}
+.form2 input{
+     padding:6px 10px;
+     border:2px solid rgb(56, 120, 189);
+     border-radius: 10px;
+}
+
+.container{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.containers{
+   max-width: 900px;
+   width:100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid  rgb(56, 120, 189);
+    text-align: center;
+    text-transform: capitalize;
+}
+.building{
+    color:rgb(85, 154, 234);
+}
+.bag{
+    color:rgb(249, 91, 201);
+}
+.price{
+    color:rgb(196, 170, 86);
+}
+.quotations{
+    color:rgb(77, 169, 182);
+    font-weight: 500;
+}
+table input{
+    width:100%;
+    height:100%;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+.btn{
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    gap:25px;
+    width:100%;
+}
+
+.plus,.calculate{
+    background-color: green;
+    color: white;
+    font-weight: 500;
+}
+
+.remove{
+    background-color: rgb(206,2,2);
+    color: white;
+    font-weight: 500;
+}
+button{
+    width:120px;
+    padding: 8px;
+    background-color: rgb(56, 120, 189);
+    color:white;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    margin-top: 10px;
+    font-weight: 500;
+}
+.boxes2{
+    max-width: 900px;
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.alltotal{
+    width:100%;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+    background-color:white;
+    color:rgb(56, 120, 189);
+    padding: 15px;
+    gap:15px;
+    border-radius: 10px;
+    border:2px solid rgba(244, 240, 240, 0.754);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.alltotal1,.alltotal2,.alltotal3{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid rgb(56, 120, 189);
+    padding: 4px;
+    gap:8px;
+}
+.alltotal2 input, .alltotal3 input{
+   max-width:500px;
+   width:100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid grey;
+   
+}
+.p1,.p2,p{
+   font-size: 14px;
+   font-weight:300;
+   text-transform: capitalize;
+}
+.p3{
+    font-size: 25px;
+}
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+.info{
+    max-width:900px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.info p{
+    text-align: center;
+}
+
+@media(max-width:768px){
+    .forms{
+        justify-content: center;
+        flex-direction: column;
+        gap:20px; }
+    .form2{width:100%;}
+}

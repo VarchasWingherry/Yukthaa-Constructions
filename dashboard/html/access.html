@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give Access Form</title>
+    <link rel="stylesheet" href="../css/access.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- dashboard -->
+      <link rel="stylesheet" href="../../css/dashboard.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  
+</head>
+<body>
+    <nav class="nav-dash">
+        <div class="logo-name">
+            <div class="logo-image">
+               <img src="../../image/logoc.png" alt="">
+            </div>
+
+            <span class="logo_name">Yuktha Construction</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="../../html/dashboard.html">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dashboard</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/facetoface.html">
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <span class="link-name">Follow Up</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/quotation.html">
+                    <i class="fa-solid fa-calculator"></i>
+                    <span class="link-name">Quotation</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/agreement.html">
+                    <i class="fa-regular fa-handshake"></i>
+                    <span class="link-name">Agreement</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/morning.html">
+                    <i class="fa-solid fa-house-circle-check"></i>
+                    <span class="link-name">Work Status</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/invoice.html">
+                    <i class="uil uil-invoice"></i>
+                    <span class="link-name">Invoice</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/receipt.html">
+                    <i class="uil uil-receipt-alt"></i>
+                    <span class="link-name">Receipt</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/purchasing.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="link-name">Purchasing</span>
+                </a></li>
+                <li><a href="../../yukthahistory/html/history.html">
+                    <i class="uil uil-history"></i>
+                    <span class="link-name">History</span>
+                </a></li>
+                <li><a href="../../yukthaworkhistory/html/workhistory.html">
+                    <i class="uil uil-constructor"></i>
+                    <span class="link-name">Work History</span>
+                </a></li>
+                <li><a href="../../yukthaworkhistory/html/access.html">
+                    <i class="fa-solid fa-universal-access"></i>
+                    <span class="link-name">Access</span>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <!-- <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a> -->
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            
+            <!--<img src="images/profile.jpg" alt="">-->
+        </div>
+        <div class="dash-content">
+            <div class="overview">
+                <!-- <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Follow Up</span>
+                </div> -->
+            </div>
+        </div>
+        <div class="accesspage-box">
+            <div class="container-access">
+                <h2>Give Access</h2>
+                <form>
+                    <div class="row">
+                        <div class="column">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+                        </div>
+                        <div class="column">
+                            <label for="mobile">Mobile <span class="required">*</span></label>
+                            <input type="text" id="mobile" name="mobile" placeholder="Mobile" required>
+                        </div>
+                        <div class="column">
+                            <label for="email">Email Id <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Email Id" required>
+                        </div>
+                        <div class="column">
+                            <label for="password">Password <span class="required">*</span></label>
+                            <input type="password" id="password" name="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <label>Gender <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="gender" value="male" required> Male</label>
+                                <label><input type="radio" name="gender" value="female" required> Female</label>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <label>User Type <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="userType" value="admin" required> Admin</label>
+                                <label><input type="radio" name="userType" value="subAdmin" required> Sub Admin</label>
+                                <label><input type="radio" name="userType" value="worker" required> Worker</label>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+            <!-- Admins -->
+            
+            <div class="containers-access">
+                <h2>Active Admins</h2>
+                <div class="table-container">
+                    <div class="table-controls">
+                        <label for="entries">Show 
+                            <select id="entries" onchange="updateEntries()">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select> 
+                        entries
+                        </label>
+                        <label for="search">Search: 
+                            <input type="text" id="search" onkeyup="searchTable()" placeholder="Search for names..">
+                        </label>
+                    </div>
+                    <table id="adminTable">
+                        <thead>
+                            <tr>
+                                <th onclick="sortTable(0)">Name &#9650;&#9660;</th>
+                                <th onclick="sortTable(1)">Email Id &#9650;&#9660;</th>
+                                <th onclick="sortTable(2)">Mobile &#9650;&#9660;</th>
+                                <th onclick="sortTable(3)">User Type &#9650;&#9660;</th>
+                                <th onclick="sortTable(4)">Created On (dd/mm/yyyy) &#9650;&#9660;</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mallikarjun</td>
+                                <td>mallikarjun.wingherry@gmail.com</td>
+                                <td>9876543210</td>
+                                <td>ADMIN</td>
+                                <td>6/6/2019</td>
+                                <td class="btn">
+                                    <button class="deny-button"><i class="fa-solid fa-xmark"></i> Deny Access</button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i> Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sundar</td>
+                                <td>sundar.wingherry@gmail.com</td>
+                                <td>9087654321</td>
+                                <td>Admin</td>
+                                <td>4/1/2020</td>
+                                <td class="btn">
+                                    <button class="deny-button"><i class="fa-solid fa-xmark"></i> Deny Access</button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i> Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Satish</td>
+                                <td>satish.wingherry@gmail.com</td>
+                                <td>9852632178</td>
+                                <td>Admin</td>
+                                <td>21/8/2019</td>
+                                <td class="btn">
+                                    <button class="deny-button"><i class="fa-solid fa-xmark"></i> Deny Access</button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i> Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Vijay</td>
+                                <td>vijay.testegg@gmail.com</td>
+                                <td>9985752406</td>
+                                <td>Admin</td>
+                                <td>10/3/2024</td>
+                                <td class="btn">
+                                    <button class="deny-button"><i class="fa-solid fa-xmark"></i> Deny Access</button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i> Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <span>Showing 1 to 4 of 4 entries</span>
+                        <div class="pagination-controls">
+                            <button onclick="prevPage()" >Previous</button>
+                            <span>1</span>
+                            <button onclick="nextPage()" >Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end -->
+        
+            <!-- Sub admins -->
+            <div class="containers-access">
+                <h2>Active Sub Admins</h2>
+                <div class="table-container">
+                    <div class="table-controls">
+                        <label for="entries">Show 
+                            <select id="entries" onchange="updateEntries()">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select> 
+                        entries
+                        </label>
+                        <label for="search">Search: 
+                            <input type="text" id="search" onkeyup="searchTable()" placeholder="Search for names..">
+                        </label>
+                    </div>
+                    <table id="adminTable">
+                        <thead>
+                            <tr>
+                                <th onclick="sortTable(0)">Name &#9650;&#9660;</th>
+                                <th onclick="sortTable(1)">Email Id &#9650;&#9660;</th>
+                                <th onclick="sortTable(2)">Mobile &#9650;&#9660;</th>
+                                <th onclick="sortTable(3)">User Type &#9650;&#9660;</th>
+                                <th onclick="sortTable(4)">Created On (dd/mm/yyyy) &#9650;&#9660;</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Adi Lakshmi</td>
+                                <td>adilakshmi.wingherry@gmail.com	</td>
+                                <td>9076854321</td>
+                                <td>ADMIN</td>
+                                <td>27/1/2020</td>
+                                <td class="btn">
+                                    <button class="deny-button"><i class="fa-solid fa-xmark"></i> Deny Access</button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i> Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Praveen</td>
+                                <td>pwingherry@gmail.com	</td>
+                                <td>8521478965</td>
+                                <td>SubAdmin</td>
+                                <td>5/9/2019</td>
+                                <td class="btn">
+                                    <button class="deny-button"><i class="fa-solid fa-xmark"></i> Deny Access</button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i> Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sai</td>
+                                <td>sai@gmail.com	</td>
+                                <td>9513578246</td>
+                                <td>SubAdmin</td>
+                                <td>21/8/2019</td>
+                                <td class="btn">
+                                    <button class="deny-button"><i class="fa-solid fa-xmark"></i> Deny Access</button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i> Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sreelatha</td>
+                                <td>sreelatha.wingherry@gmail.com	</td>
+                                <td>8907654321</td>
+                                <td>SubAdmin</td>
+                                <td>27/1/2020</td>
+                                <td class="btn">
+                                    <button class="deny-button"><i class="fa-solid fa-xmark"></i> Deny Access</button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i> Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sreelatha</td>
+                                <td>sreelatha.wingherry@gmail.com	</td>
+                                <td>9563284584</td>
+                                <td>SubAdmin</td>
+                                <td>5/9/2019</td>
+                                <td class="btn">
+                                    <button class="deny-button"><i class="fa-solid fa-xmark"></i> Deny Access</button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i> Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sudheer Kumar</td>
+                                <td>sudheer.testegg@gmail.com	</td>
+                                <td>8096768738</td>
+                                <td>SUBADMIN</td>
+                                <td>27/7/2019</td>
+                                <td class="btn">
+                                    <button class="deny-button"><i class="fa-solid fa-xmark"></i> Deny Access</button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i> Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <span>Showing 1 to 4 of 4 entries</span>
+                        <div class="pagination-controls">
+                            <button onclick="prevPage()" >Previous</button>
+                            <span>1</span>
+                            <button onclick="nextPage()" >Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- end -->
+        
+            <!-- ACTIVE WORTKES -->
+            <div class="containers-access">
+                <h2>Active Sub Admins</h2>
+                <div class="table-container">
+                    <div class="table-controls">
+                        <label for="entries">Show 
+                            <select id="entries" onchange="updateEntries()">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select> 
+                        entries
+                        </label>
+                        <label for="search">Search: 
+                            <input type="text" id="search" onkeyup="searchTable()" placeholder="Search for names..">
+                        </label>
+                    </div>
+                    <table id="adminTable">
+                        <thead>
+                            <tr>
+                                <th onclick="sortTable(0)">Name &#9650;&#9660;</th>
+                                <th onclick="sortTable(1)">Email Id &#9650;&#9660;</th>
+                                <th onclick="sortTable(2)">Mobile &#9650;&#9660;</th>
+                                <th onclick="sortTable(3)">User Type &#9650;&#9660;</th>
+                                <th onclick="sortTable(4)">Created On (dd/mm/yyyy) &#9650;&#9660;</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lakshmi Kumari	</td>
+                                <td>lakshmi@gmail.com	</td>
+                                <td>9087632413</td>
+                                <td>WORKER</td>
+                                <td>20/8/2019</td>
+                                <td class="btn">
+                                    <button class="deny-button"><i class="fa-solid fa-xmark"></i> Deny Access</button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i> Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Swathi</td>
+                                <td>swathi@gmail.com	</td>
+                                <td>8523697410</td>
+                                <td>Worker</td>
+                                <td>21/8/2019</td>
+                                <td class="btn">
+                                    <button class="deny-button"><i class="fa-solid fa-xmark"></i> Deny Access</button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i> Delete</button>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <span>Showing 1 to 4 of 4 entries</span>
+                        <div class="pagination-controls">
+                            <button onclick="prevPage()" >Previous</button>
+                            <span>1</span>
+                            <button onclick="nextPage()" >Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- END -->
+        </div>
+        </div>
+            
+
+    </section>
+<script src="../../js/admindashboard.js"></script>
+    
+<script src="../js/access.js"></script>
+</body>
+</html>

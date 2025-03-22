@@ -1,0 +1,21 @@
+
+      
+        .charts {
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: max-content;
+            padding: 10px;
+        }
+        .chart-container {
+            max-width: 450px;
+            width: 100%;
+            height: max-content;
+            padding: 10px;
+            box-sizing: border-box; /* Ensures padding is included in width */
+            /* border: 1px solid black; */
+        }
+   

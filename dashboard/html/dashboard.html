@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="../css/graph.css">
+    <link rel="stylesheet" href="../css/piecharts.css">
+    <title>Admin Dashboard Panel</title>
+</head>
+<body>
+    <nav class="nav-dash">
+        <div class="logo-name">
+            <div class="logo-image">
+               <img src="../image/logoc.png" alt="">
+            </div>
+
+            <span class="logo_name">Yuktha Construction</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="../html/dashboard.html">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dashboard</span>
+                </a></li>
+                <li><a href="../yukthaform/html/facetoface.html">
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <span class="link-name">Follow Up</span>
+                </a></li>
+                <li><a href="../yukthaform/html/quotation.html">
+                    <i class="fa-solid fa-calculator"></i>
+                    <span class="link-name">Quotation</span>
+                </a></li>
+                <li><a href="../yukthaform/html/agreement.html">
+                    <i class="fa-regular fa-handshake"></i>
+                    <span class="link-name">Agreement</span>
+                </a></li>
+                <li><a href="../yukthaform/html/morning.html">
+                    <i class="fa-solid fa-house-circle-check"></i>
+                    <span class="link-name">Work Status</span>
+                </a></li>
+                <li><a href="../yukthaform/html/invoice.html">
+                    <i class="uil uil-invoice"></i>
+                    <span class="link-name">Invoice</span>
+                </a></li>
+                <li><a href="../yukthaform/html/receipt.html">
+                    <i class="uil uil-receipt-alt"></i>
+                    <span class="link-name">Receipt</span>
+                </a></li>
+                <li><a href="../yukthaform/html/purchasing.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="link-name">Purchasing</span>
+                </a></li>
+                <li><a href="../yukthahistory/html/history.html">
+                    <i class="uil uil-history"></i>
+                    <span class="link-name">History</span>
+                </a></li>
+                <li><a href="../yukthahistory/html/workstatus.html">
+                    <i class="uil uil-constructor"></i>
+                    <span class="link-name">Work History</span>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <!-- <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a> -->
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            
+            <!--<img src="images/profile.jpg" alt="">-->
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Dashboard</span>
+                </div>
+
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="fa-solid fa-helmet-safety"></i>
+                        <span class="text">Total Projects</span>
+                        <span class="number">50</span>
+                    </div>
+                    <div class="box box2">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span class="text">completed</span>
+                        <span class="number">30</span>
+                    </div>
+                    <div class="box box3">
+                        <i class="fa-solid fa-bars-progress"></i>
+                        <span class="text">In progrees</span>
+                        <span class="number">20</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="title">
+                    <i class="uil uil-clock-three"></i>
+                    <span class="text">Recent Activity</span>
+                </div>
+
+                <div class="activity-data">
+                    <div class="data names">
+                        <span class="data-title">Customer Name</span>
+                        <span class="data-list">Vijay</span>
+                        <span class="data-list">Varchas</span>
+                        <span class="data-list">Rohan</span>
+                        <span class="data-list">Madhavi</span>
+                        <span class="data-list">Rajeshwari</span>
+                        <span class="data-list">Sudheer</span>
+                        <span class="data-list">Tanushree</span>
+                    </div>
+                    <div class="data email">
+                        <span class="data-title">Location</span>
+                        <span class="data-list">Hyderabad</span>
+                        <span class="data-list">Haveri</span>
+                        <span class="data-list">Ranebennur</span>
+                        <span class="data-list">Hyderabad</span>
+                        <span class="data-list">Hyderabad</span>
+                        <span class="data-list">Hyderabad</span>
+                        <span class="data-list">Hyderabad</span>
+                    </div>
+                    <div class="data joined">
+                        <span class="data-title">Started</span>
+                        <span class="data-list">2022/02/12</span>
+                        <span class="data-list">2022/02/12</span>
+                        <span class="data-list">2022/02/13</span>
+                        <span class="data-list">2022/02/13</span>
+                        <span class="data-list">2022/02/14</span>
+                        <span class="data-list">2022/02/14</span>
+                        <span class="data-list">2022/02/15</span>
+                    </div>
+                    <div class="data ended">
+                        <span class="data-title">Ended</span>
+                        <span class="data-list">2022/02/12</span>
+                        <span class="data-list">2022/02/12</span>
+                        <span class="data-list">2022/02/13</span>
+                        <span class="data-list">2022/02/13</span>
+                        <span class="data-list">2022/02/14</span>
+                        <span class="data-list">2022/02/14</span>
+                        <span class="data-list">2022/02/15</span>
+                    </div>
+                    <div class="data type">
+                        <span class="data-title">Building Type</span>
+                        <span class="data-list">Villa</span>
+                        <span class="data-list">House</span>
+                        <span class="data-list">Complex</span>
+                        <span class="data-list">Apartment</span>
+                        <span class="data-list">House</span>
+                        <span class="data-list">Villa</span>
+                        <span class="data-list">Complex</span>
+                    </div>
+                    <div class="data area">
+                        <span class="data-title">Site Area</span>
+                        <span class="data-list">2000 sqft</span>
+                        <span class="data-list">2500 sqft</span>
+                        <span class="data-list">3000 sqft</span>
+                        <span class="data-list">2000 sqft</span>
+                        <span class="data-list">2800 sqft</span>
+                        <span class="data-list">1500 sqft</span>
+                        <span class="data-list">2200 sqft</span>
+                    </div>
+                    <div class="data status">
+                        <span class="data-title">Status</span>
+                        <span class="data-list">completed</span>
+                        <span class="data-list">In progrees</span>
+                        <span class="data-list">completed</span>
+                        <span class="data-list">completed</span>
+                        <span class="data-list">In progrees</span>
+                        <span class="data-list">completed</span>
+                        <span class="data-list">In progrees</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Sales charts -->
+             <!-- graph -->
+            <div class="graph">
+                <div id="chart_div"></div>
+            </div>
+
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script type="text/javascript">
+              google.charts.load('current', {'packages':['corechart']});
+              google.charts.setOnLoadCallback(drawChart);
+          
+              function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                  ['Year', 'Contract', 'Expenses'],
+                  ['2019',  1000,  400],
+                  ['2020',  1000,  400],
+                  ['2021',  1000,  400],
+                  ['2022',  1170,  460],
+                  ['2023',  660,  1120],
+                  ['2024',  1030,  540]
+                ]);
+          
+                var options = {
+                  title: 'Company Performance',
+                  hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+                  vAxis: {minValue: 0},
+                  chartArea: {width: '70%', height: '80%'} // Adjusts the chart area to reduce white space
+                };
+          
+                var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+                chart.draw(data, options);
+              }
+            </script>
+
+
+
+            <!--piechart  -->
+            <div class="charts">
+                <div id="piechart_3d" class="chart-container"></div>
+                <div id="donutchart" class="chart-container"></div>
+            </div>
+
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script type="text/javascript">
+                google.charts.load("current", {packages:["corechart"]});
+                google.charts.setOnLoadCallback(drawCharts);
+        
+                function drawCharts() {
+                    // States Covered Chart
+                    var data1 = google.visualization.arrayToDataTable([
+                        ['State', 'Percentage'],
+                        ['Telangana', 11],
+                        ['Andhra Pradesh', 2],
+                        ['Karnataka', 2],
+                        ['Tamil Nadu', 2]
+                    ]);
+        
+                    var options1 = {
+                        title: 'States Covered',
+                        is3D: true,
+                        chartArea: { width: '100%', height: '100%' } // Reduce white space around the chart
+                    };
+        
+                    var chart1 = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+                    chart1.draw(data1, options1);
+        
+                    // No of Workers Chart
+                    var data2 = google.visualization.arrayToDataTable([
+                        ['Role', 'Number'],
+                        ['Admin', 3],
+                        ['Employees', 10],
+                        ['Contractor', 20],
+                        ['Site Engineers', 10],
+                        ['Mestri', 20],
+                        ['Electrician', 7],
+                        ['Plumber', 10],
+                        ['Centering', 15],
+                        ['Carpenter', 20],
+                        ['Supervisor', 3],
+                        ['Watchmen', 20],
+                        ['Others', 15]
+                    ]);
+        
+                    var options2 = {
+                        title: 'No of Workers',
+                        pieHole: 0.4,
+                        chartArea: { width: '100%', height: '100%' } // Reduce white space around the chart
+                    };
+        
+                    var chart2 = new google.visualization.PieChart(document.getElementById('donutchart'));
+                    chart2.draw(data2, options2);
+                }
+            </script>
+
+
+              
+        </div>
+    </section>
+
+    <script src="../js/admindashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"poppins"
+}
+
+/*nav*/
+.main-content{
+    margin-left: 4%;
+    margin-right: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:35px
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width:100%;
+}
+.navbar h1{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(56, 120, 189);
+    /*margin-right: 5%;
+    margin-left: 5%;*/
+    width:230px;
+}
+.h1 i{
+    font-size: 20px;
+    margin-right: 4%;
+}
+.logo{
+    width:50px;
+    
+    object-fit: cover;
+    object-position: center;
+   /* margin-right: 10%;*/
+}
+.box1{
+    max-width: 1000px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:25px;
+}
+.box1 h1{
+    font-size: 20px;
+    color:rgb(56, 120, 189)
+}
+h2{
+    font-size: 18px;
+    text-transform: capitalize;
+    text-align: center;
+}
+.boxes{
+    max-width: 400px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:20px;
+    
+} 
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:rgb(246, 244, 244);
+    border-radius: 10px;
+    border:1px solid rgb(188, 186, 186);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+label{
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding-left: 8px;
+}
+input{
+    width:200px;
+    padding: 8px;
+    text-align: center;
+    font-size: 16px;
+    text-transform: capitalize;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 0 10px 10px 0;
+}
+p{
+    text-align: center;
+}
+button{
+    width:120px;
+    padding: 8px;
+    background-color: white;
+    color:rgb(56, 120, 189);
+    cursor: pointer;
+    text-transform: capitalize;
+    margin-top: 10px;
+    border: 2px solid rgb(56, 120, 189);
+}
+.info{
+    max-width:900px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+ button:hover{
+    background-color: rgb(56, 120, 189);
+    color:white;
+    cursor: pointer;
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotation</title>
+    <link rel="stylesheet" href="../css/quotation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <!-- dashboard -->
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+<body>
+    <nav class="nav-dash">
+        <div class="logo-name">
+            <div class="logo-image">
+               <img src="../../image/logoc.png" alt="">
+            </div>
+
+            <span class="logo_name">Yuktha Construction</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="../../html/dashboard.html">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dashboard</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/facetoface.html">
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <span class="link-name">Follow Up</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/quotation.html">
+                    <i class="fa-solid fa-calculator"></i>
+                    <span class="link-name">Quotation</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/agreement.html">
+                    <i class="fa-regular fa-handshake"></i>
+                    <span class="link-name">Agreement</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/morning.html">
+                    <i class="fa-solid fa-house-circle-check"></i>
+                    <span class="link-name">Work Status</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/invoice.html">
+                    <i class="uil uil-invoice"></i>
+                    <span class="link-name">Invoice</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/receipt.html">
+                    <i class="uil uil-receipt-alt"></i>
+                    <span class="link-name">Receipt</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/purchasing.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="link-name">Purchasing</span>
+                </a></li>
+                <li><a href="../../yukthahistory/html/history.html">
+                    <i class="uil uil-history"></i>
+                    <span class="link-name">History</span>
+                </a></li>
+                <li><a href="../../yukthaworkhistory/html/workhistory.html">
+                    <i class="uil uil-constructor"></i>
+                    <span class="link-name">Work History</span>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <!-- <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a> -->
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            
+            <!--<img src="images/profile.jpg" alt="">-->
+        </div>
+        <div class="dash-content">
+            <div class="overview">
+                <!-- <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Follow Up</span>
+                </div> -->
+            </div>
+        </div>
+
+    <div class="main-content">
+        <nav class="navbar">
+            <img class="logo"src="https://www.yukthaa.com/logoc.png"/>
+            <h1 class="h1"><i id="i" class="fa-solid fa-file-invoice"></i>Quotation</h1>
+        </nav>
+       <div class="boxes">
+         <div class="box">
+          <form>
+            <div class="forms">
+                 <div class="form1">
+                    <label>Date</label>
+                    <input type="datetime-local"/>
+                 </div>
+                 <div class="form1">
+                    <label>Full Name</label>
+                    <input type="text"/>
+                 </div>
+              </div>
+              <div class="forms">
+                <div class="form1">
+                   <label>Phone No</label>
+                   <input type="number"/>
+                </div>
+                <div class="form1">
+                   <label>Address</label>
+                   <input type="text"/>
+                </div>
+             </div>
+             <div class="forms">
+                <div class="form1">
+                   <label>Note</label>
+                   <input type="text"/>
+                </div>
+                <div class="form1">
+                   <label>Subject</label>
+                   <input type="text"/>
+                </div>
+             </div>
+          </form>
+
+
+          <div class="container">
+            <div class="containers">
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th><i class="fa-solid fa-building building"></i>item</th>
+                            <th><i class="fa-solid fa-bag-shopping bag"></i>qty</th>
+                            <th><i class="fa-solid fa-money-bill price"></i>price</th>
+                            <th><i class="fa-solid fa-money-bill price"></i>total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input  type="text" ></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input id="train" type="text"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+            <div class="table-container">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><input class="quotations" type="text" value="Total"></td>
+                        <td><input type="text" value=""></td>
+                        <td><input type="text"value=""></td>
+                        <td><input class="quotationtotal" type="text"value="0"></td>
+                    </tr>
+                </tbody>
+            </form>
+            </table>
+            </div>
+            </div>
+          </div>
+          <div class="btn">
+            <button class="add">Add Table</button>
+            <button class="remove">Remove</button>
+            <button class="plus">Add</button>
+          </div>
+          <div class="table1 gst" id="gsttable">
+          <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Total</th>
+                        <th>Gst</th>
+                        <th>Gst Amount</th>
+                        <th>Grand Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input id="Price1"/></td>
+                        <td><input type="number" id="rate1" placeholder="Enter GST"></td>
+                        <td><input id="gst1" value="0"></input></td>
+                        <td><input  id="total1" value="0"></input></td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div> 
+        <div class="btn">
+            <button class="calculate">calculate gst</button>
+        </div>
+         </div>
+         <div class="boxes2">
+            <div class="alltotal">
+               <div class="alltotal1">
+                   <p>subtotal</p>
+                   <p class="p1">0</p>
+               </div>
+               <div class="alltotal2">
+                   <p>Gst</p>
+                   <p class="p2">0</p>
+               </div>
+               <div class="alltotal3">
+                   <p>Grand Total</p>
+                   <p class="p3">0</p>
+               </div>
+            </div>
+        </div>
+        <div class="info">
+            <button>Download Pdf</button>
+        </div>
+         </div>
+        </div>
+    </div>  
+    </section>
+    <script src="../../js/admindashboard.js"></script>
+   
+    <script src="../javascript/quotation.js"></script>
+</body>
+</html>

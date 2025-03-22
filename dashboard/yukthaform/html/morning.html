@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning</title>
+    <link rel="stylesheet" href="../css/morning.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <!-- dashboard -->
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+<body>
+    <nav class="nav-dash">
+        <div class="logo-name">
+            <div class="logo-image">
+               <img src="../../image/logoc.png" alt="">
+            </div>
+
+            <span class="logo_name">Yuktha Construction</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="../../html/dashboard.html">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dashboard</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/facetoface.html">
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <span class="link-name">Follow Up</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/quotation.html">
+                    <i class="fa-solid fa-calculator"></i>
+                    <span class="link-name">Quotation</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/agreement.html">
+                    <i class="fa-regular fa-handshake"></i>
+                    <span class="link-name">Agreement</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/morning.html">
+                    <i class="fa-solid fa-house-circle-check"></i>
+                    <span class="link-name">Work Status</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/invoice.html">
+                    <i class="uil uil-invoice"></i>
+                    <span class="link-name">Invoice</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/receipt.html">
+                    <i class="uil uil-receipt-alt"></i>
+                    <span class="link-name">Receipt</span>
+                </a></li>
+                <li><a href="../../yukthaform/html/purchasing.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="link-name">Purchasing</span>
+                </a></li>
+                <li><a href="../../yukthahistory/html/history.html">
+                    <i class="uil uil-history"></i>
+                    <span class="link-name">History</span>
+                </a></li>
+                <li><a href="../../yukthaworkhistory/html/workhistory.html">
+                    <i class="uil uil-constructor"></i>
+                    <span class="link-name">Work History</span>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <!-- <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a> -->
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            
+            <!--<img src="images/profile.jpg" alt="">-->
+        </div>
+        <div class="dash-content">
+            <div class="overview">
+                <!-- <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Follow Up</span>
+                </div> -->
+            </div>
+        </div>
+
+    <div class="main-content">
+        <nav class="navbar">
+            <img class="logo"src="https://www.yukthaa.com/logoc.png"/>
+            <h1 class="h1"><i id="i" class="fa-solid fa-briefcase"></i>Work Status</h1>
+        </nav>
+       <div class="boxes">
+            <div class="box">
+                <div class="box1">
+                <h2 class="choose">Choose Work Status</h2>
+            <div class="form1">
+                 <label>Morning Status</label>
+                 <input type="checkbox">
+            </div>
+            <div class="form1">
+                 <label>Evening Status</label>
+                 <input type="checkbox" id="eveningcheckbox">
+                </div> 
+            </div>
+            </div>
+
+
+            <div class="box2">
+                <form>
+                    <div class="forms">
+                        <div class="form2">
+                         <label>Date</label>
+                         <input type="datetime-local">
+                        </div>
+                        <div class="form2">
+                            <label>Site Name</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="forms">
+                        <div class="form2">
+                         <label>Note</label>
+                         <input type="text">
+                        </div>
+                        <div class="form2">
+                            <label>Project Name</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="box3">
+                <div class="box4">
+                <h2>How Much Work Has Been Done</h2>
+                <div class="box5">
+                    <div class="card1">
+                        <label for="input-file" id="droparea" class="droparea">
+                            <input type="file" accept="image/*" id="input-file" hidden>
+                        <div class="img-view" id="img-view">
+                            <i class="fa-solid fa-cloud-arrow-up i"></i>
+                           <p>drag and drop or click here </p>
+                           <p class="span">upload any image</p>
+                        </div>
+                    </label>
+                    </div>
+
+                     <div class="card1">
+                        <label for="input-file1" id="droparea1" class="droparea">
+                            <input type="file" accept="image/*" id="input-file1" hidden>
+                        <div class="img-view1" id="img-view">
+                            <i class="fa-solid fa-cloud-arrow-up i1"></i>
+                           <p class="p1">drag and drop or click here </p>
+                           <p class="span1">upload any image</p>
+                        </div>
+                    </label>
+                    </div>
+
+                    <div class="card1">
+                        <label for="input-file2" id="droparea2" class="droparea">
+                            <input type="file" accept="image/*" id="input-file2" hidden>
+                        <div class="img-view2" id="img-view">
+                            <i class="fa-solid fa-cloud-arrow-up i2"></i>
+                           <p class="p2">drag and drop or click here </p>
+                           <p class="span2">upload any image</p>
+                        </div>
+                    </label>
+                    </div>
+
+                    <div class="card1" id="cards">
+                        <label for="input-file3" id="droparea3"class="droparea">
+                            <input type="file" accept="image/*" id="input-file3" hidden>
+                        <div class="img-view3" id="img-view">
+                            <i class="fa-solid fa-cloud-arrow-up i3"></i>
+                           <p class="p3">drag and drop or click here </p>
+                           <p class="span3" >upload any image </p>
+                        </div>
+                    </label>
+                    </div>
+
+                    <div class="card1">
+                        <label for="input-file4" id="droparea4" class="droparea">
+                            <input type="file" accept="image/*" id="input-file4" hidden>
+                        <div class="img-view4" id="img-view">
+                            <i class="fa-solid fa-cloud-arrow-up i4"></i>
+                           <p class="p4">drag and drop or click here </p>
+                           <p class="span4">upload any image</p>
+                        </div>
+                    </label>
+                    </div>
+                    <div class="card1 cards">
+                        <label for="input-file5" id="droparea5" class="droparea">
+                            <input type="file" accept="image/*" id="input-file5" hidden>
+                        <div class="img-view5" id="img-view">
+                            <i class="fa-solid fa-cloud-arrow-up i5"></i>
+                           <p class="p5">drag and drop or click here </p>
+                           <p class="span5">upload any image</span>
+                        </div>
+                    </label>
+                    </div> .
+                </div>
+                </div>
+
+                <div class="box6">
+                    <div class="container">
+                        <h1>Upload Video</h1>
+                        <form id="uploadForm">
+                          <input type="file" id="videoFile" accept="video/*">
+                          <input type="submit" class="button">
+                        </form>
+                        <div id="videoPlayer"></div>
+                      </div>
+
+                </div>
+            </div>
+        </div>
+        </div> 
+    </section>
+    <script src="../../js/admindashboard.js"></script>
+   
+    <script src="../javascript/morning.js"></script>
+</body>
+</html>
