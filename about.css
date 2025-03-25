@@ -33,7 +33,9 @@ html{
 }
 
 
-
+.content-of-page{
+  padding: 20px;
+}
 /*about Box*/
 
 .slideshow-container {
@@ -51,22 +53,6 @@ html{
 }
 
 
-/* Caption text */
-/* .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center
-} */
-
-.about{
-    padding-top: 80px;
-    padding-left: 100px;
-    padding-right: 100px;
-}
 .work{
     padding: 50px 120px;
 }
@@ -121,66 +107,11 @@ html{
     margin: 0;
 }
 
-@media screen and (max-width: 768px) {
-  .about {
-      padding-left: 20px;
-      padding-right: 20px;
-  }
+@media (max-width: 768px) {
+ 
 
-  .box h1 {
-      font-size: 1.4rem;
-  }
-  .para p{
-    font-size: 0.9rem;
-  }
-  .para h1{
-    font-size: 1.4rem;
-  }
-  .para h2{
-    font-size: 1.2rem;
-  }
-  .in-box {
-      flex-direction: column;
-  }
-
-  .slideshow-container {
-      width: 100%;
-      max-width: none;
-      margin-right: 0;
-      padding-top: 0;
-  }
-
-  .para {
-      width: 100%;
-      margin-top: 20px;
-  }
 }
 
-
-@media screen and (max-width: 428px) {
-  .slideshow-container {
-      width: 100%;
-      max-width: none;
-      margin-right: 0;
-      padding-top: 0;
-  }
-  .box h1 {
-    font-size: 1rem;
-}
-.para p{
-  font-size: 0.7rem;
-}
-.para h1{
-  font-size: 1rem;
-}
-.para h2{
-  font-size: 1rem;
-}
-  .para {
-      width: 100%;
-      margin-top: 20px;
-  }
-}
 
 /*yt video*/
 .yt .icon {
