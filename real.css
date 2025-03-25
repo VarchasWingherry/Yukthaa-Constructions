@@ -139,9 +139,7 @@ html{
 }
 
 .company section h1 {
-  font-size: 2rem;
-  /* padding: 20px; */
-  margin: 10px 0px;
+  font-size: 32px;
 }
 
 .company section .slider {
@@ -187,9 +185,9 @@ html{
   .slider-items img {
     width: 120px;
   }
-  .company section h1 {
+  /* .company section h1 {
     font-size: 24px;
-  }
+  } */
 }
 
 @media screen and (max-width: 430px) {
@@ -201,49 +199,66 @@ html{
   }
 }
 
-
+.heading-hr{
+  width: max-content;
+  margin: auto;
+  margin-bottom: 15px;
+}
+.heading-hr hr{
+    margin-bottom: 15px;
+    height: 4px;
+    background-color: #007bff; /* Blue accent */
+    border: none;
+    margin: auto;
+    border-radius: 5px;
+}
   /*service page new*/
    
   .card-container-box{
-    /* margin-top: 5.5rem;
-    margin-bottom: 12rem; */
+    padding: 50px 0px;
   }
   .card-head h1{
-    font-size: 2rem;
+    font-size: 32px;
     text-align: center;
   }
+ 
   .card-head p{
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 18px;
+    color: #313131;
+    padding-bottom: 15px;
   }
   .card-container{
+    margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex: 0 0 calc(50% - 20px);
-
+    gap: 25px;
   }
   .card-article{
-    margin: 10px;
+    /* margin: 10px; */
+    border-radius:14px;
     position: relative;
-    overflow: hidden;
-    width: 280px;
-    height: 240px;
+    /* overflow: hidden; */
+    max-width: 300px;
+    width: 100%;
+    height: 300px;
   }
   .card-img{
     width: 100%;
-    height: 240px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 1rem;
+    border-radius:14px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
   .card-data{
-    width: 235px;
+    max-width: 280px;
+    width: 100%;
     background-color: whitesmoke;
-    padding: 0.5rem 0.8rem;
+    padding: 10px 12px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    border-radius: 1rem;
+    border-radius: 10px;
     position: absolute;
     bottom: -8.5rem;
     left: 0;
@@ -252,20 +267,20 @@ html{
     opacity: 0;
     transition: opacity 1s 1s;
   }
-
+  .card-title{
+    font-size: 16px;
+    text-align: center;
+  }
   .card-description{
     display: block;
-    font-size:0.8rem;
-    margin-bottom: 0.25rem;
+    font-size:14px;
+    text-align: center;
   }
-  .card-title{
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-  }
+  
   .card-article:hover .card-data{
     animation: show-data 1s forwards;
     opacity: 1;
-    transition: opacity .3s;
+    transition: opacity .5s;
   }
   .card-article:hover{
     animation: remove-overflow 2s forwards;
@@ -276,393 +291,267 @@ html{
   .card-article:not(:hover) .card-data{
     animation: remove-data 1s forwards;
   }
-  @keyframes show-data{
-    50%{
+  @keyframes show-data {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
       transform: translateY(-10rem);
     }
-    100%{
-      transform: translateY(-7rem) ;
+    100% {
+      transform: translateY(-7rem);
     }
   }
-  @keyframes remove-overflow{
-    to{
+  
+  @keyframes remove-overflow {
+    0% {
+      overflow: hidden;
+    }
+    100% {
       overflow: initial;
     }
   }
-  @keyframes remove-data{
-    0%{
+  
+  @keyframes remove-data {
+    0% {
       transform: translateY(-7rem);
     }
-    
-    50%{
+    50% {
       transform: translateY(-10rem);
     }
-    
-    100%{
-      transform: translateY(.5rem);
+    100% {
+      transform: translateY(0.5rem);
     }
   }
-  @keyframes  show-overflow {
-    0%{
+  
+  @keyframes show-overflow {
+    0% {
       overflow: initial;
       pointer-events: none;
     }
-    50%{
+    50% {
       overflow: hidden;
     }
+    100% {
+      pointer-events: auto;
+    }
   }
+  
   /* Media query for smaller screens */
-  @media screen and (max-width: 768px) {
-    .card-article {
-        flex: 0 0 calc(50% - 15px); /* Each card takes up full width of the container minus some margin */
-       padding-left: 10px;
-       padding-top: 8px;
-       padding-bottom: 15px;
-       height: 100%;
-       gap: 20px;
-      }
-
-      .card-data{
-        width: calc(95%-5px);
-      }
-      .card-head h1{
-        font-size: 1.6rem;
-      }
-      .card-head p{
-        font-size: 0.8rem;
-      }
-  }
-  @media screen and (max-width: 430px) {
-    .card-article {
-        flex: 0 0 calc(70% - 25px); /* Each card takes up full width of the container minus some margin */
-       padding-left: 10px;
-       padding-bottom: 25px;
-       padding-top: 5px;
-       height: 100%;
-       gap: 20px;
-      }
-      .card-head h1{
-        font-size: 1.3rem;
-      }
-      .card-head p{
-        font-size: 0.6rem;
-      }
-
+  /* @media (max-width: 768px) {
+    
+  } */
+  @media (max-width: 430px) {
+    .card-head h1{
+      font-size: 24px;
+    }
+    .card-head p{
+      font-size: 16px;
+    }
+    .card-container{
+      gap: 40px;
+    }
   }
 
   
    /*what we do*/
-   .whatwedo{
-    background-color: whitesmoke;
-    color: rgb(0, 0, 0);
-    /* border: 1px solid rgb(217, 217, 217); */
-    /* margin-top: 1000px;
-    margin-bottom: 50px; */
-  }
-  .what-we-do{
-    margin: 10px 120px;
-  }
-  .what-head{
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 5px;
-  }
-  .what-head h1{
-    font-size: 3.5rem;
-  }
-  .what-we-do p{
-    font-size: 1.5rem;
-  }
-
-  .icon-box {
-    display: flex;
-    justify-content: space-around;
-   
-  }
-  
-  .image-container {
-    display: flex;
-    flex-direction: row;
-    width: 45%;
-    margin: 15px;
-    
-    
-  }
-  
-  .image-container{
-    border: 1px solid black;
-    align-items: center;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    background-color: rgb(220, 244, 247);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    transition: 0.2s ease-in-out;
-  }
-  .image-container:hover{
-    transform: scale(1.05);
-    transition: 0.1s;
-  }
-  .doing h1, p{
-    margin: 10px;
-  }
-  .image-container img{
-    
-    width: 30%;
-  }
-
-
-  /*  */
-  
-/* Container for "What We Do" section */
-.whatwedo {
-  background-color: whitesmoke;
-  color: rgb(0, 0, 0);
-  border: 1px solid black;
-  margin-top: -150px;
-  margin-bottom: 50px;
-  padding: 20px; 
-}
-
-
-.what-we-do {
-  max-width: 1200px;
-  margin: 0 auto; 
-  padding: 0 20px; 
-}
-
-
-.what-head {
-  padding: 20px;
+.wwd-section {
   text-align: center;
+  padding: 50px 20px;
+  background-color: whitesmoke;
+  border: 1px solid rgb(231, 231, 231);
+}
+
+.wwd-container {
+  max-width: 100%;
+  margin: auto;
+}
+
+/* Section Header */
+.wwd-header h1 {
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  font-size: 32px;
+}
+
+
+.wwd-header p {
+  font-size: 18px;
+  color: #313131;
+  max-width: 80%;
+  margin: auto;
+}
+
+/* Services Grid */
+.wwd-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Service Item */
+.wwd-service-item {
+  background-color: #c2e6eb;
+  border: 1px solid rgb(205, 205, 205);
+  max-width: 620px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.wwd-service-item:hover {
+  transform: translateY(-10px);
+}
+
+/* Image Styling */
+.wwd-service-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Text Content */
+.wwd-service-text{
+  text-align: left;
+}
+.wwd-service-text h2 {
+  font-size: 20px;
+  font-weight: 600;
   margin-bottom: 5px;
 }
 
-
-.what-head h1 {
-  font-size: 2rem;
+.wwd-service-text p {
+  font-size: 16px;
+  color: #212121;
+  max-width: 400px;
+  width: 100%;
+}
+@media (max-width:550px) {
+  .wwd-header h1 {
+    font-size: 24px;
+  }
+  .wwd-header p {
+    font-size: 18px;
+  }
+  .wwd-service-item {
+    gap: 10px;
+  }
+  .wwd-service-text{
+    text-align: center;
+  }
 }
 
 
-.what-we-do p {
-  font-size: 1rem;
-}
-.image-container div h1{
-  font-size: 1.2rem;
-}
-.image-container div p{
-  font-size: 1rem;
+   /*why yukthaa*/
+/* 🌟 General Styling */
+.wwy-section {
+  background: linear-gradient(135deg, #fdfbfb, #e2e2e2);
+  text-align: center;
+  padding: 70px 20px;
 }
 
-/* Container for icons */
-.icon-box {
+.wwy-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* 🏆 Section Header */
+.wwy-header h1 {
+  font-size: 32px;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+
+
+/* 📌 Features Grid */
+.wwy-features {
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: center; 
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 40px;
+  padding: 0 20px;
 }
 
-.image-container {
-  flex: 0 0 calc(50% - 30px); 
-  margin: 15px;
-  border: 1px solid black;
-  align-items: center;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: rgb(220, 244, 247);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  transition: 0.2s ease-in-out;
+/* 🎯 Feature Items */
+.wwy-feature-item {
+  max-width: 350px;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(218, 218, 218);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-/* Hover effect */
-.image-container:hover {
-  transform: scale(1.05);
-  transition: 0.1s;
+/* 🌟 Hover Effects (Blue Gradient) */
+.wwy-feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #cce5ff, #80bfff); /* Soft blue gradient */
 }
 
-
-.image-container h1,
-.image-container p {
-  margin: 10px;
-  text-align: center; 
+/* 📌 Feature Image */
+.wwy-feature-content img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
 }
 
-
-.image-container img {
-  width: 30%; 
-  margin: 0 auto; 
+/* 🚀 Image Hover Effect */
+.wwy-feature-item:hover img {
+  transform: scale(1.1);
 }
 
-
-@media screen and (max-width: 768px) {
-  .image-container {
-      flex: 0 0 calc(100% - 30px); 
-  }
-  .image-container img{
-    width: 20%;
-  }
-  .what-head h1{
-    font-size: 1.6rem;
-  }
-  .what-we-do p{
-    font-size: 0.8rem;
-  }
-  .image-container div h1{
-    font-size: 0.9rem;
-  }
-  .image-container div p{
-    font-size: 0.6rem;
-  }
-
+/* ✍️ Feature Title */
+.wwy-feature-item h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: black;
+  transition: color 0.3s;
 }
 
-  /*  */
-  /*why yukthaa*/
-  .why-yukthaa{
-    /* margin-top: 80px;
-    margin-bottom: 30px;
-    padding-top: 100px; */
-    text-align: center;
-
-  }
-  .outter-box{
-    background-color:var(--heading-color);
-    border-radius: 10px;
-    height: 200px;
-    width: 95%;
-    
-  }
-  .inner-content{
-    text-align: center;
-  }
-  .inner-content h1{
-    font-size: 2rem;
-    color: whitesmoke;
-  }
-  .choosing{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;;
-  
-  }
-  .features{
-    position: relative;
-    margin-top: 50px;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-left: 15px;
-    margin-right: 15px;
-    padding-bottom: 10px;
-    background-color: #fdfafa;
-    text-align: center;
-    height: 120px;
-    transition: 0.3s ease-in-out;
-  }
-  .features:hover{
-    margin-top: 20px;
-    height: 240px;
-  }
-  .features p{
-    visibility: hidden;
-    font-size: 0.8rem;
-    text-align: center;
-    width: 180px;
-    opacity: 0;
-    transition: 0.1s ease-in-out ;
-  }
-  .features:hover p{
-    visibility:  visible;
-    opacity: 1;
-    transition-delay: 0.2s;
-    
-  }
-  .features img{
-    margin-top: 20px;
-    width: 30%;
-  }
-  .features h4{
-    font-size: 1rem;
-  }
-  @media screen and (max-width: 768px) {
-    .inner-content h1{
-      font-size: 1.6rem;
-    }
-    .features {
-        width: calc(20% - 40px); 
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-    .features p{
-      width: calc(95% - 10px);
-      font-size: 0.55rem;
-      text-align:center;
-    }
-    .features h4{
-      font-size: 0.7rem;
-    }
-    .choosing{
-      padding: 0px;
-      justify-content: space-evenly;
-    }
-    .features  img{
-      width: calc(70% - 20px);
-    }
-    
+/* 📝 Feature Description */
+.wwy-feature-item p {
+  font-size: 18px;
+  color: #212121;
+  margin-top: 5px;
+  transition: color 0.3s, opacity 0.3s ease-in-out;
 }
-  @media screen and (max-width:428px) {
-    .inner-content h1{
-      font-size: 1.3rem;
-    }
-    .features {
-      width: calc(40% - 40px); 
-      margin-left: 5px;
-      margin-right: 5px;
+
+/* 📱 Responsive Design (Less Media Queries) */
+@media screen and (max-width: 550px) {
+  .wwy-header h1 {
+      font-size: 24px;
   }
-  .features p{
-    width: calc(95% - 10px);
-    font-size: 0.4rem;
-    text-align:center;
+  .wwy-feature-item h4 {
+      font-size: 18px;
   }
-  .features h4{
-    font-size: 0.6rem;
+
+  .wwy-feature-item p {
+      font-size: 16px;
   }
-  .choosing{
-    padding: 0px;
-    justify-content: space-evenly;
-  }
-  .features  img{
-    width: calc(50% - 20px);
-  }
-  }
-  @media screen and (max-width:370px) {
-    .inner-content h1{
-      font-size: 1rem;
-    }
-    .features {
-      width: calc(40% - 40px); 
-      margin-left: 1px;
-      margin-right: 1px;
-  }
-  .features:hover{
-    height: max-content;
-  }
-  .features p{
-    width: calc(95% - 10px);
-    font-size: 0.35rem;
-    text-align:center;
-    padding: 0;
-    margin: 4px;
-  }
-  .features h4{
-    font-size: 0.5rem;
-  }
-  .choosing{
-    padding: 0px;
-    justify-content: space-evenly;
-  }
-  .features  img{
-    width: calc(60% - 20px);
-  }
-  }
+}
 
   
 

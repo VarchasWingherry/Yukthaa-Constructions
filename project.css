@@ -22,7 +22,6 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     transition: 0.2s;
-    text-transform: capitalize;
     transition: all 0.2s linear;
     text-decoration: none;
 }
