@@ -6,15 +6,17 @@
     <link rel="icon" href="logoc.png">
     <title>Yukthaa Constructions & Contracts</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="navbarfooter.css">
     <link rel="stylesheet" href="service.css">
 </head>
 <body>
     <header>
         <nav>
-            <ul class='nav-bar'>
-                <li class='logo'><a href='#'><img src='logoc.png'/></a></li>
-                <input type='checkbox' id='check' />
-                <span class="menu">
+            <div class="logo-part">
+                <img src="./logoc.png" alt="Logo">
+            </div>
+            <div class="nav-social-part">
+                <ul class="menu">
                     <li><a href="yukthahome.html">Home</a></li>
                     <li><a href="yukthaprojects.html">Project</a></li>
                     <li><a href="yukthaAboutus.html">About Us</a></li>
@@ -23,22 +25,40 @@
                     <li><a href="yukthacareers.html">Career</a></li>
                     <li><a href="yukthagallery.html">Gallery</a></li>
                     <li><a href="yukthacontact.html">Contact</a></li>
-                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
-                </span>
-                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
-    
-                <button class="button" ><a href="yukthalogin.html">Login</a></button>
+                </ul>
+                <div class="login-part">
+                    <button class="button"><a href="yukthalogin.html">Login</a></button>
+                </div>
                 <div class="nav-social">
                     <a href="https://api.whatsapp.com/send/?phone=919985752406&text=Hai+Madam%2FSir&type=phone_number&app_absent=0"><img src="whatsapp_3670051.png" alt=""></a>
-                    <a href=""> <img src="twitter_5968830.png" alt=""> </a>
-                    <a href="https://www.facebook.com/YukthaEarthMovers/"><img src="facebook.svg" alt=""></a>
-                    <a href="https://www.instagram.com/yuktha.vijay.9/"><img src="instagram.svg" alt=""></a>
-                    <a href="https://www.linkedin.com/in/yuktha-earth-moves-0174911bb/"><img src="linkedin.svg" alt=""></a>
-                    <a href="https://www.youtube.com/channel/UC6FxZLkkCQX9gYsuJEp97tA"><img src="youtube.svg" alt=""></a>
+                            <a href=""> <img src="twitter.png" alt=""> </a>
+                            <a href="https://www.facebook.com/YukthaEarthMovers/"><img src="facebook (1).png" alt=""></a>
+                            <a href="https://www.instagram.com/yuktha.vijay.9/"><img src="instagram.png" alt=""></a>
+                            <a href="https://www.linkedin.com/in/yuktha-earth-moves-0174911bb/"><img src="linkedin.png" alt=""></a>
+                            <a href="https://www.youtube.com/channel/UC6FxZLkkCQX9gYsuJEp97tA"><img src="youtube.png" alt=""></a>
                 </div>
-            </ul>
+            </div>
+            <div class="hamburger" onclick="toggleSidebar()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </nav>
-        </header>
+        <div class="sidebar" id="sidebar">
+            <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+            <ul>
+                <li><a href="yukthahome.html">Home</a></li>
+                <li><a href="yukthaprojects.html">Project</a></li>
+                <li><a href="yukthaAboutus.html">About Us</a></li>
+                <li><a href="yukthateam.html">TEAM</a></li>
+                <li><a href="yukthaservices.html">Services</a></li>
+                <li><a href="yukthacareers.html">Career</a></li>
+                <li><a href="yukthagallery.html">Gallery</a></li>
+                <li><a href="yukthacontact.html">Contact</a></li>
+            </ul>
+            <div class="login-part">
+                <button class="button"><a href="yukthalogin.html">Login</a></button>
+            </div>
+        </div>
+    </header>
         
 <!--service-->
    <!-- <div class="box">
@@ -99,55 +119,58 @@
         </div>
         </div>
     </div>-->
-    <div class="head">
-        <h1>Services</h1>
-        <p>Yuktha - Leading Home & Commercial Construction Company in Hyderabad Who Offers End-To-End Home Solutions, With 50+ Projects Delivered in AP& Telangana</p>
-    </div>    
-    <div class="container">
-        <div class="card">
-            <div class="imgbx"><img src="excavation.jpg" alt=""></div>
-            <div class="content">
-                <h3>Excavation Works</h3>
-                    <p>Understanding plans, setting out, digging, and removing soil. Quality checks include recording ground levels and marking reference points. It involves moving earth, rock, or materials using various tools and techniques, like trenching, tunneling, and underground work, marking the beginning of any construction project.</p>
-                    <a href="yukthaexcavation.html">Explore</a>
+    <div class="service-part-box">
+        <div class="head">
+            <h1>Services</h1>
+            <p>Yuktha - Leading Home & Commercial Construction Company in Hyderabad Who Offers End-To-End Home Solutions, With 50+ Projects Delivered in AP& Telangana</p>
+        </div>    
+        <div class="container">
+            <div class="card">
+                <div class="imgbx"><img src="excavation.jpg" alt=""></div>
+                <div class="content">
+                    <h3>Excavation Works</h3>
+                        <p>Understanding plans, setting out, digging, and removing soil. Quality checks include recording ground levels and marking reference points. It involves moving earth, rock, or materials using various tools and techniques, like trenching, tunneling, and underground work, marking the beginning of any construction project.</p>
+                        <a href="yukthaexcavation.html">Explore</a>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="imgbx"><img src="materialcon.jpg" alt=""></div>
-            <div class="content">
-                <h3>Material Contract</h3>
-                    <p>A material contract is a detailed agreement between parties, often between an owner and contractor, outlining specific terms for work execution. It involves the contractor supplying all construction materials and ensuring sufficient labor, tools, and equipment to fulfill the agreed scope of work.</p>
-                    <a href="yukthapackages.html">Explore</a>
+            <div class="card">
+                <div class="imgbx"><img src="materialcon.jpg" alt=""></div>
+                <div class="content">
+                    <h3>Material Contract</h3>
+                        <p>A material contract is a detailed agreement between parties, often between an owner and contractor, outlining specific terms for work execution. It involves the contractor supplying all construction materials and ensuring sufficient labor, tools, and equipment to fulfill the agreed scope of work.</p>
+                        <a href="yukthapackages.html">Explore</a>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="imgbx"><img src="malepmc.jpg" alt=""></div>
-            <div class="content">
-                <h3>PMC</h3>
-                    <p>Construction project management is overseen by a skilled Construction Project Manager. This individual orchestrates, budgets, and oversees the entire construction project. Their duties include estimating and negotiating project costs, as well as formulating the construction budget.</p>
-                    <a href="pmc.html">Explore</a>
+            <div class="card">
+                <div class="imgbx"><img src="malepmc.jpg" alt=""></div>
+                <div class="content">
+                    <h3>PMC</h3>
+                        <p>Construction project management is overseen by a skilled Construction Project Manager. This individual orchestrates, budgets, and oversees the entire construction project. Their duties include estimating and negotiating project costs, as well as formulating the construction budget.</p>
+                        <a href="pmc.html">Explore</a>
+                </div>
             </div>
-        </div>
-        
-        
-        <div class="card">
-            <div class="imgbx"><img src="othercivil.jpg" alt=""></div>
-            <div class="content">
-                <h3>Other Civil Works</h3>
-                    <p>Other civil works in construction encompass a broad range of activities beyond excavation and solar installations. These may include: Foundation Work, Concrete Work, Masonry Work, Structural Steel Work, Finishing Work, Utilities Installation, Earthworks, etc.</p>
-                    <a href="othercivil.html">Explore</a>
+            
+            
+            <div class="card">
+                <div class="imgbx"><img src="othercivil.jpg" alt=""></div>
+                <div class="content">
+                    <h3>Other Civil Works</h3>
+                        <p>Other civil works in construction encompass a broad range of activities beyond excavation and solar installations. These may include: Foundation Work, Concrete Work, Masonry Work, Structural Steel Work, Finishing Work, Utilities Installation, Earthworks, etc.</p>
+                        <a href="othercivil.html">Explore</a>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="imgbx"><img src="landdevelopers.jpg" alt=""></div>
-            <div class="content">
-                <h3>Land Developers</h3>
-                    <p>Got land? Need a developer? Let Yuktha bridge the gap! We connect landowners with developers in Hyderabad for Joint Development Agreements. Maximize your land's potential or find the perfect plot for your next project with us. Let's make real estate development hassle-free.</p>
-                    <a href="yukthalanddeveloper.html">Explore</a>
+    
+            <div class="card">
+                <div class="imgbx"><img src="landdevelopers.jpg" alt=""></div>
+                <div class="content">
+                    <h3>Land Developers</h3>
+                        <p>Got land? Need a developer? Let Yuktha bridge the gap! We connect landowners with developers in Hyderabad for Joint Development Agreements. Maximize your land's potential or find the perfect plot for your next project with us. Let's make real estate development hassle-free.</p>
+                        <a href="yukthalanddeveloper.html">Explore</a>
+                </div>
             </div>
         </div>
     </div>
+    
 
    
 

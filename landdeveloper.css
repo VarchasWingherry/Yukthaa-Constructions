@@ -7,182 +7,225 @@
     font-family: "Poppins", sans-serif;
 }
 .section{
-    margin: 10px;
+    padding: 10px;
+    padding-top: 105px;
 }
-.head h2, h5, p{
-    margin: 5px;
+.section .back{
+    padding-left: 20px;
+}
+.section .head h2, 
+.section .head h5, 
+.section .head p {
+    margin-bottom: 10px;
     color: black;
     text-align: center;
+    font-size: 16px;
 }
-.head p{
-    margin: 8px;
+.section .head h2{
+    font-size: 18px;
+}
+.section .head p {
+    margin-bottom: 10px;
     align-items: center;
     padding-left: 50px;
     padding-right: 50px;
-    font-size: 0.8rem;
+    font-size: 16px;
 }
 
-
-/* Table Styles */
-
-.table-wrapper{
-    margin: 10px 70px 70px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+/* Table Wrapper */
+.table-wrapper {
+    background-color: rgba(240, 240, 240, 0.145);
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    width: 95%;
+    margin: 10px auto;
+    padding: 20px 15px;
 }
 
+/* Table Styling */
 .fl-table {
     border-radius: 5px;
     font-size: 12px;
-    font-weight: normal;
     border: none;
     border-collapse: collapse;
     width: 100%;
     max-width: 100%;
-    white-space: nowrap;
     background-color: white;
 }
 
-.fl-table td, .fl-table th {
+/* Table Headers with Alternative Colors */
+.fl-table thead th {
+    color: #ffffff;
+    padding: 10px;
+}
+
+.fl-table thead th:nth-child(odd) {
+    background: #5ed0f3; /* Light Blue */
+}
+
+.fl-table thead th:nth-child(even) {
+    background: #6c9ccc; /* Darker Blue */
+}
+
+/* Table Cells */
+.fl-table td, 
+.fl-table th {
     text-align: center;
     padding: 8px;
     font-size: 1rem;
-}
-
-.fl-table td {
     border-right: 1px solid #e4e4e4;
-    font-size: 0.9rem;
 }
 
-.fl-table thead th {
-    color: #ffffff;
-    background: #5ed0f3;
-}
-
-
-.fl-table thead th:nth-child(odd) {
-    color: #ffffff;
-    background: #6c9ccc;
-}
-
+/* Alternating Row Colors */
 .fl-table tr:nth-child(even) {
     background: #F8F8F8;
 }
 
-/* Responsive */
-
-@media (max-width: 767px) {
-    .fl-table {
-        display: block;
-        width: 100%;
-    }
-    .table-wrapper:before{
-        content: "Scroll horizontally >";
-        display: block;
-        text-align: right;
-        font-size: 11px;
-        color: white;
-        padding: 0 0 10px;
-    }
-    .fl-table thead, .fl-table tbody, .fl-table thead th {
-        display: block;
-    }
-    .fl-table thead th:last-child{
-        border-bottom: none;
-    }
-    .fl-table thead {
-        float: left;
-    }
-    .fl-table tbody {
-        width: auto;
-        position: relative;
+/* Responsive Scroll */
+@media screen and (max-width: 768px) {
+    .table-wrapper {
         overflow-x: auto;
     }
-    .fl-table td, .fl-table th {
-        padding: 20px .625em .625em .625em;
-        height: 60px;
-        vertical-align: middle;
-        box-sizing: border-box;
-        overflow-x: hidden;
-        overflow-y: auto;
-        width: 120px;
-        font-size: 13px;
-        text-overflow: ellipsis;
-    }
-    .fl-table thead th {
-        text-align: left;
-        border-bottom: 1px solid #e4e4e4;
-    }
-    .fl-table tbody tr {
-        display: table-cell;
-    }
-    .fl-table tbody tr:nth-child(odd) {
-        background: none;
-    }
-    .fl-table tr:nth-child(even) {
-        background: transparent;
-    }
-    .fl-table tr td:nth-child(odd) {
-        background: #F8F8F8;
-        border-right: 1px solid #cecccc;
-    }
-    .fl-table tr td:nth-child(even) {
-        border-right: 1px solid #E6E4E4;
-    }
-    .fl-table tbody td {
+
+    .fl-table {
         display: block;
-        text-align: center;
+        /* overflow-x: auto; */
+        width: 100%;
+        white-space: nowrap;
     }
 }
 
+/* DataTables Pagination & Search Styling */
+.dataTables_wrapper .dataTables_filter input {
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+}
 
-/* form */
+.dataTables_wrapper .dataTables_length select {
+    border-radius: 4px;
+    padding: 5px;
+}
 
-.container {
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 5px 10px;
+    margin: 2px;
+    border: 1px solid #6c9ccc;
+    background: #6c9ccc;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: #5ed0f3;
+}
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 15px; 
+}
+
+.dataTables_wrapper .dataTables_length {
+    margin-bottom: 15px; 
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    margin-top: 15px; 
+}
+
+
+/* Form */
+/* Main Container */
+.section .data {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
+/* Headline */
+.section .data-head {
+    text-align: center;
     margin-bottom: 20px;
+    font-size: 1rem;
+    color: #333;
 }
 
-.form-group label {
+/* Form Styling */
+.section .container {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+/* Form Group */
+.section .form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Labels */
+.section .form-group label {
     display: block;
     margin-bottom: 5px;
-    font-weight: 400;
+    font-weight: bold;
+    color: #333;
 }
 
-.form-group input,
-.form-group select {
+/* Inputs and Select */
+.section .form-group input,
+.section .form-group select {
     width: 100%;
     padding: 10px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
+    transition: 0.3s ease-in-out;
 }
 
-.form-group select {
-    appearance: none;
-    padding-right: 30px;
+.section .form-group input:focus,
+.section .form-group select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
-.form-group input[type="submit"] {
+/* Error Messages */
+.section .error-message {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+/* Input Error Border */
+.section .error-border {
+    border: 1px solid red !important;
+}
+
+/* Submit Button */
+.section .form-group input[type="submit"] {
     background-color: #007bff;
-    color: #fff;
+    color: white;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
 }
 
-.form-group input[type="submit"]:hover {
+.section .form-group input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
+/* Responsive */
 @media screen and (max-width: 600px) {
-    .form-group label,
-    .form-group input,
-    .form-group select {
-        width: 100%;
+    .section .data {
+        padding: 10px;
     }
 }

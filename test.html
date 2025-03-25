@@ -1,210 +1,184 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>footer</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- <link rel="stylesheet" href="style2.css"> -->
-        <style>
-            *{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-   
-}
-body{
-    line-height: 1.8;
-    font-family: 'poppins',sans-serif;
-
-   
-   
-}
-.container {
-    max-width: 1170px;
-    margin: auto;
-    padding: 30px;
-
-}
-.row {
-    display: flex;
-    flex-wrap: wrap;
-   
-}
-
-ul{
-    list-style: none;
-   
-   
-}
-.footer {
-    background-color:aqua;
-   
-    padding: 70px 0;
-    text-align: center;
-    color: #333;
-   
-   
-}
-
-.footer-column {
-    width: 25%;
-    padding: 0 15px;
-    min-width: 200px;
-     
-   
-}
-.footer-column h4 {
-    margin-bottom: 30px;
-    font-size: 18px;
-color:#333;
-    text-transform: capitalize;
-    margin-bottom: 35px;
-    font-weight: bold;
-    position: relative;
-    text-decoration: none;
-display: inline-block;
-border-bottom: 2px solid red;
-padding-bottom: 5px;  
-
-
-   
-}
-.footer-column h4::before {
-
-content: '';
-position: absolute;
-   
-    left: 0;
-    bottom: -10px;
-   
-    height: 2px;
-    box-sizing: border-box;
-    width: 30px;
-}
-
-.footer-column ul li:not(:last-child){
-    margin-bottom: 10px;
-
-}
-.footer-column ul li a {
-    font-size: 18px;
-    text-transform: capitalize;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 300;
-
-    color:#333;
-   
-    transition: all 6.3s ease;
-
-
-   
-
-}
-.footer-column ul li a:hover{
-    color: #ffffff;
-    padding-left: 8px;
-}
-.footer-section.quick-links h4
-.footer-section.contact-us h4 {
-    border-bottom: 3px solid red;  /* Creates a red line under the section titles */
-    padding-bottom: 5px;
-    text-decoration: none;          /* Space between text and the line */
-}
-.social-icons {
-    margin-top: 10px;
-}
-
-.social-icons a {
-    color:#fff;
-    text-decoration: none;
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .masterpagesnavbar{
+    position: fixed;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;  
+    background-color: white;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+  }
+  
+  .mainlogo{
+    color: rgb(0,123,255);
     font-size: 20px;
-    margin:  0 5px ;
-    color: #333;
-    display: inline-block;
-   
-    padding-bottom: 5px;
-    transition: color 0.3s ease;
-
-}
-.social-icons a:hover {
-    color: red;
-    background-color: #ffffff;
-}
-.footer-bottom {
-   background-color: #444 ;
-color:#fff;
-    padding-top:15px;
-    text-align: center;
+    font-weight: bolder;
+    display: flex;
     justify-content: center;
-    clear: both;
-    border-top: 1px solid #555;
+    align-items: center;
+  }
+  
+  nav .mainlogo:hover{
+    background-color: white ;
+  }
+  
+  .mainlogo img{
+    max-width: 190px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav li{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav a{
+    font-weight: 500;
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
     display: flex;
     align-items: center;
-    height: 50px;
-   
-}
-.footer-bottom p{
-    margin: 0;
-    font-size: 14px;
-   
-}
-@media (max-width : 767px){
-    .footer-column {
-        width: 50%;
-        margin-bottom: 30px;
+    color: black;
+    font-size: clamp(16px,3vw,16px);
+  }
+  
+  nav a:hover{
+    background-color: #e7e7e7;
+  }
+  
+  nav .login div{
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    padding: 5px 10px;
+    color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #fc6933;
+  }
+  
+  nav a.login:hover{
+    background-color: white;
+  }
+  
+  nav li:first-child{
+    margin-right: auto;
+  }
+  
+  .masternavbarnav{
+    position: fixed;
+    top: 0; 
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: white;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 20;
+  }
+  
+  .masternavbarnav li{
+    width: 100%;
+  }
+  
+  .masternavbarnav a{
+    width: 100%;
+  }
+  
+  .fa-xmark, .fa-bars{
+    font-size: 22px;
+  }
+  
+  .menu-button{
+    display: none;
+  }
+  
+  @media(max-width: 800px){
+    .hideOnMobile{
+      display: none;
     }
-
-}
-@media(max-width:574px){
-    .footer-column{
-        font-weight: 100%;
+    .menu-button{
+      display: block;
     }
-}
-        </style>
-    </head>
-    <body>
-               
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <p>about us</p>
-                     <p>We are in leading platform offering high-quality services and resources to our global aduience</p>  
-<p>Our mission is to provide value-driven solution with a focus on innovation and excellence.</p>
-                   
-                   
+  }
+  
+  @media(max-width: 400px){
+    .mainlogo img{
+      max-width: 180px;
+      width: 100%;
+    }
+  
+    .masternavbarnav{
+      width: 100%;
+    }
+  }
+  
+    </style>
+</head>
+<body>
+    <nav class="masterpagesnavbar">
+        <ul class="masternavbarnav">
+          <li onclick="hideNavbar()"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+          <li><a href="../html/kikiclickadshome.html">Home</a></li>
+          <li><a href="../html/aboutus.html">About Us</a></li>
+          <li><a href="../html/loginoption.html">Ads</a></li>
+          <li><a href="../html/homegetplans.html">Get Plans</a></li>
+          <li><a href="../html/contact.html">Contact</a></li>
+          <li><a href="../html/loginoption.html" class="login"><div>Login</div></a></li> 
+        </ul>
+        <ul>
+          <li><a class="mainlogo" href="../html/kikiclickadshome.html"><img src="../login_icon/kikiclicklogo.png" alt=""></a></li>
+          <li class="hideOnMobile"><a href="../html/kikiclickadshome.html">Home</a></li>
+          <li class="hideOnMobile"><a href="../html/aboutus.html">About Us</a></li>
+          <li class="hideOnMobile"><a href="../html/loginoption.html">Ads</a></li>
+          <li class="hideOnMobile"><a href="../html/homegetplans.html">Get Plans</a></li>
+          <li class="hideOnMobile"><a href="../html/contact.html">Contact us</a></li>
+          <li class="hideOnMobile"><a href="../html/loginoption.html" class="login"><div>Login</div></a></li>
+          <li class="menu-button" onclick="showNavbar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+            
+        </ul>
+      </nav>
 
-                </div>
-                <div class="footer-column">
-                    <h4>Contact Us</h4>
-                    <p>Email:kalyanijidugu295@gmail.com</p>
-                    <p>Phone :6894567190</p>
-                    <p>Address : hyderabad</p>
-                </div>
-                <div class="footer-column">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer footer-column">
-                    <h4>Follow Us</h4>
-                    <div class="social-icons">
-                   <a href="#"><i class="fab fa-facebook-f"></i></a>
-                   <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                   
-                </div>
-            </div>
-                    <div class="footer-bottom">
-                        <p>&copy:2024 your Company, All rights resvered .</p>
-        </div>
-                </div>
-    </footer>
-    </body>
+      <script>
+        function showNavbar() {
+  const navbar = document.querySelector('.masternavbarnav');
+  navbar.style.display = 'flex';
+}
+
+function hideNavbar() {
+  const navbar = document.querySelector('.masternavbarnav');
+  navbar.style.display = 'none';
+}
+
+      </script>
+</body>
 </html>
