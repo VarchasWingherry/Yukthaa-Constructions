@@ -101,45 +101,51 @@
     </div>
     <!--contact us-->
     <form action="#" id="connect-with-us">
-    <fieldset>
-      <div id="connect-head">Connect with Us</div>
-      <div class="form-column">
-        <div class="form-control">
-          <label for="name">Full Name:</label>
-          <input type="text" id="connect-name" name="name" placeholder="Enter your full name" required>
+        <div class="fieldset">
+          <div id="connect-head">Connect with Us</div>
+          <div class="form-control">
+            <label for="name">Full Name:</label>
+            <input type="text" id="connect-name" name="name" placeholder="Enter your full name" required>
+            <span class="error-message" id="name-error" style="color: red; display: none;">Full name is required</span>
+          </div>
+          <div class="form-control">
+            <label for="email">Email Address:</label>
+            <input type="email" id="connect-email" name="email" placeholder="Enter your email" required>
+            <span class="error-message" id="email-error" style="color: red; display: none;">Email is required</span>
+            <span class="error-message" id="email-format-error" style="color: red; display: none;">Please enter a valid email (e.g., example@domain.com or example@domain.in)</span>
+          </div>
+      
+          <div class="form-control">
+            <label for="subject">Subject:</label>
+            <input type="text" id="connect-subject" name="subject" placeholder="Subject of your message" required>
+            <span class="error-message" id="subject-error" style="color: red; display: none;">Subject is required</span>
+          </div>
+    
+          <div class="form-control">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="connect-phone" name="phone" placeholder="Enter your phone number" required>
+            <span class="error-message" id="phone-error" style="color: red; display: none;">Phone number is required</span>
+            <span class="error-message" id="phone-format-error" style="color: red; display: none;">Phone number should be 10 digits</span>
+          </div>
+          <div class="form-control">
+            <label for="file">Upload CV/Resume:</label>
+            <input type="file" id="connect-file" name="file" required>
+            <span class="error-message" id="file-error" style="color: red; display: none;">Please upload a file</span>
+          </div>
+      
+          <div class="form-control1">
+            <label for="message">Message:</label>
+            <textarea id="message" name="connect-message" placeholder="Write your message here..." rows="5" required></textarea>
+            <span class="error-message" id="message-error" style="color: red; display: none;">Message is required</span>
+            <span class="error-message" id="message-word-error" style="color: red; display: none;">Your message should be between 1 and 120 words</span>
+          </div>
+      
+          <div class="form-control2">
+            <button type="button" value="Send Message" class="submit-btn" onclick="validateForm()">Send Message</button>
+          </div>
         </div>
-        <div class="form-control">
-          <label for="email">Email Address:</label>
-          <input type="email" id="connect-email" name="email" placeholder="Enter your email" required>
-        </div>
-      </div>
-  
-      <div class="form-control">
-        <label for="subject">Subject:</label>
-        <input type="text" id="connect-subject" name="subject" placeholder="Subject of your message" required>
-      </div>
-  
-      <div class="form-column">
-        <div class="form-control">
-          <label for="phone">Phone Number:</label>
-          <input type="tel" id="connect-phone" name="phone" placeholder="Enter your phone number" required>
-        </div>
-        <div class="form-control">
-          <label for="file">Upload CV/Resume:</label>
-          <input type="file" id="connect-file" name="file" required>
-        </div>
-      </div>
-  
-      <div class="form-control">
-        <label for="message">Message:</label>
-        <textarea id="message" name="connect-message" placeholder="Write your message here..." rows="5" required></textarea>
-      </div>
-  
-      <div class="form-control">
-        <button type="button" value="Send Message" class="submit-btn">Send Message</button>
-      </div>
-    </fieldset>
     </form>
+ 
     <!-- /contact -->
   
  </div>
@@ -215,5 +221,6 @@
         </div>
     </footer>  
     <script src="navbar.js"></script>
+    <script src="carrers.js"></script>
 </body>
 </html>
