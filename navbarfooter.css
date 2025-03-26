@@ -9,6 +9,19 @@
     transition: all 0.2s linear;
     text-decoration: none;
 }
+:root{
+    --font-color:#9c9c9c;
+    --heading-color:#2c353d;
+    --primar-color:#efbb20;
+    --navbar-color:#2c353d;
+    --darkblue-color:#2c70b9;
+    --blue-color:#47c7ee;
+    --darkgreen-color:#2ba048;
+    --orange-color:#f35325;
+    --lightgreen-color:#81bc06;
+    --yellow-color:#ffba08;
+    --text-color:#1f1a17;
+  }
 html{
     
     overflow-x:hidden ;
@@ -22,6 +35,7 @@ html{
 /* navbar */
 nav {
     position: fixed;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -265,7 +279,8 @@ font-weight: 600;
 
 /* Footer Container */
 .footer-container {
-    max-width: 1200px;
+    /* max-width: 1200px; */
+    width: 92%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
