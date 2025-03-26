@@ -61,7 +61,8 @@
 </header>
         
 
-    <!--career-->
+ <div class="content-of-page">
+       <!--career-->
     <div class="career-header">
         <h1>careers</h1>
     </div>
@@ -81,65 +82,67 @@
                 <h2>Construction Project Manager</h2>  
                 <p>Directs projects from start to finish, ensuring adherence to timelines. Leads site operations, facilitating communication between stakeholders and workers for synchronized progress. Tasks include planning, budgeting, timeline estimation, and progress oversight.</p>
             </div>
-        </div>
-        <div class="career-box">
+
             <div class="career-content">
                 <h2>Workers on the construction site</h2>  
                 <p> Essential to construction projects, they execute tasks vital for project completion. Various roles include masonry and ironworkers. They work tirelessly under the guidance of the project manager, transforming project plans into reality.</p>
             </div>
+
             <div class="career-content">
                 <h2>Supervisor</h2>  
                 <p>Bridges communication between construction workers and upper management, ensuring smooth project operations. Responsible for maintaining order and efficiency on the construction site, overseeing tasks to prevent disruptions.</p>
             </div>
+
             <div class="career-content">
                 <h2>Electricians/ Technicians</h2>  
                 <p>Specialists in electrical installations and troubleshooting. They wire newly constructed buildings and address any electrical issues that arise during construction. Responsible for fixing lighting and power-related issues on the construction site.</p>
             </div>
         </div>
     </div>
-<!--contact us-->
-<form action="#">
+    <!--contact us-->
+    <form action="#" id="connect-with-us">
     <fieldset>
-      <legend>Connect with us</legend>
-      <div class="column">
-      <div class="form-control">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="enter your name" required>
+      <div id="connect-head">Connect with Us</div>
+      <div class="form-column">
+        <div class="form-control">
+          <label for="name">Full Name:</label>
+          <input type="text" id="connect-name" name="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-control">
+          <label for="email">Email Address:</label>
+          <input type="email" id="connect-email" name="email" placeholder="Enter your email" required>
+        </div>
       </div>
-  
-      <div class="form-control">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="enter your email" required>
-      </div>
-    </div>
   
       <div class="form-control">
         <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" required>
+        <input type="text" id="connect-subject" name="subject" placeholder="Subject of your message" required>
       </div>
-      <div class="column">
-      <div class="form-control">
-        <label for="Phone">Phone No:</label>
-        <input type="number" id="Phone" name="Phone" required>
+  
+      <div class="form-column">
+        <div class="form-control">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="connect-phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div class="form-control">
+          <label for="file">Upload CV/Resume:</label>
+          <input type="file" id="connect-file" name="file" required>
+        </div>
       </div>
-      <div class="form-control">
-        <label for="file">Upload Cv/Resume:</label>
-        <input type="file" id="file" name="file" required>
-      </div>
-
-    </div>
   
       <div class="form-control">
         <label for="message">Message:</label>
-        <textarea id="message" name="message" cols="160" placeholder="write something.." required></textarea> 
+        <textarea id="message" name="connect-message" placeholder="Write your message here..." rows="5" required></textarea>
       </div>
   
       <div class="form-control">
-        <input type="submit" value="Send" class="submit-btn" >
+        <button type="button" value="Send Message" class="submit-btn">Send Message</button>
       </div>
     </fieldset>
-  </form>
-
+    </form>
+    <!-- /contact -->
+  
+ </div>
     <!--footer-->
     <footer>
         <div class="footer-container">
@@ -155,7 +158,7 @@
                     <strong>Email:</strong> contactus@yukthaa.com
                 </p>
             </div>
-    
+
             <!-- Quick Links -->
             <div class="footer-section quick-links">
                 <h3>Quick Links</h3>
@@ -168,7 +171,7 @@
                     <li><a href="yukthacontact.html">Contact</a></li>
                 </ul>
             </div>
-    
+
             <!-- Our Services -->
             <div class="footer-section our-services">
                 <h3>Our Services</h3>
@@ -181,7 +184,7 @@
                     <li><a href="yukthaservices.html">PMC</a></li>
                 </ul>
             </div>
-    
+
             <!-- Social & Newsletter (Wrapped in one div) -->
             <div class="footer-section social-newsletter-wrapper">
                 <!-- Social Links -->
@@ -194,7 +197,7 @@
                         <a href=""><img src="linkedin.svg" alt="LinkedIn"></a>
                     </div>
                 </div>
-    
+
                 <!-- Newsletter Subscription -->
                 <div class="newsletter">
                     <h3>Get in Touch</h3>
@@ -203,14 +206,14 @@
                 </div>
             </div>
         </div>
-    
+
         <hr>
-    
+
         <div class="footer-bottom">
             <p>© 2024 YUKTHA CONSTRUCTIONS. All Rights Reserved.</p>
             <p>Designed by <a href="https://www.wingherry.com/">Wingherry Technologies</a></p>
         </div>
-    </footer> 
-
+    </footer>  
+    <script src="navbar.js"></script>
 </body>
 </html>

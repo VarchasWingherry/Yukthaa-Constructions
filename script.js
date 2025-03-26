@@ -1,7 +1,3 @@
-function toggleSidebar() {
-    document.getElementById("sidebar").classList.toggle("active");
-}
-
 
 // sldier
 let slideIndex = 0;
