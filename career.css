@@ -20,38 +20,31 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    transition: 0.2s;
     text-transform: capitalize;
-    transition: all 0.2s linear;
-    text-decoration: none;
-}
-html{
-    
-    overflow-x:hidden ;
-    scroll-behavior: smooth;
-    scroll-padding-top:6rem ;
 
 }
-
-
+.content-of-page{
+  padding: 20px;
+  padding-top: 83px;
+}
 /*career*/
 .career-header{
-  margin-left: 40px;
-  padding-top: 80px;
-  padding-left: 100px;
+  padding-left: 20px;
+  padding-top: 20px;
 }
 .career-header h1{
-  font-size: 1.6rem;
+  font-size: 24px;
 }
 .career{
-  padding: 50px 100px 20px 100px;
+  padding: 20px;
 }
 
 .career-box{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+  gap: 30px;
 }
 .career-box .career-content:hover{
   background-color: rgb(168, 215, 231);
@@ -60,85 +53,58 @@ html{
 }
 .career-box .career-content{
   text-align: center;
-  width: 340px;
-  height: 250px;
-  margin-bottom: 40px;
-  padding: 15px;
+  max-width: 340px;
+  width: 100%;
+  height: 280px;
+  padding: 20px;
   border-radius: 10px;
   color: #102C57;
   background-color:lightblue;
   box-shadow: rgba(14, 30, 37, 0.92) 0px 2px 4px 0px, rgba(14, 30, 37, 0.52) 0px 2px 16px 0px;
 }
 .career-content h2{
-  font-size: 1.1rem;
+  font-size: 18px;
   text-align: center;
-  padding-top: 25px;
-  padding-bottom: 10px;
 }
 .career-content p{
-  font-size: 0.85rem;
-}
-@media screen and (max-width: 768px) {
-  .career-header h1{
-    font-size: 1.3rem;
-   
-    text-align: center;
-  }
-  .career-header{
-    padding-left: 0px;
-    margin-left: 0;
-  }
-  .career-content h2{
-    font-size: 0.9rem;
-  }
-  .career-content p{
-    font-size: 0.75rem;
-  }
-  .career-box .career-content{
-    width: 100%;
-  }
-}
-@media screen and (max-width: 430px) {
-  .career-header h1{
-    font-size: 1.3rem;
-   
-    text-align: center;
-  }
-  .career-header{
-    padding-left: 0px;
-    margin-left: 0;
-  }
-  .career-content h2{
-    font-size: 0.8rem;
-  }
-  .career-content p{
-    font-size: 0.7rem;
-  }
-  .career-box .career-content{
-    width: 100%;
-  }
-  .career{
-    padding: 10px 35px;
-  }
+  font-size: 16px;
 }
 
+@media (max-width:398px) {
+  .career-box .career-content{
+    height: 100%;
+  }
+}
 /*contact*/
-
-fieldset {
-  background-color: rgb(245, 245, 245);
+#connect-with-us{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+#connect-with-us fieldset {
+  background-color: rgba(248, 248, 248, 0.651);
   border-radius: 10px;
-  font-size: 1rem;
-  margin: 30px auto; 
-  padding: 40px;
-  border: 1px solid #474747;
-  max-width: 600px; 
+  padding: 20px;
+  max-width: 1000px;
+  width: 100%;
 }
 
-legend {
+#connect-with-us fieldset #connect-head {
   padding: 0 10px;
   color: black;
-  font-size: 1rem;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
 }
+fieldset:hover #connect-head{
+  bottom: 38px;
+  background-color: transparent;
+  width: max-content;
+  z-index: 999;
+}
+
 
 .column {
   display: flex;
@@ -149,17 +115,19 @@ legend {
 .form-control {
   padding: 10px;
   width: 100%;
-  box-sizing: border-box; 
 }
 
 .form-control input,
 .form-control textarea {
   width: 100%;
-  padding: 5px;
-  border-radius: 5px;
-  border: 0.5px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0.5px solid rgb(223, 223, 223);
 }
 
+.form-control textarea {
+  background-color: #102c5733;
+}
 
 .column .form-control input {
   width: 100%; 
@@ -172,13 +140,12 @@ legend {
   color: white;
   width: 100%; 
   padding: 10px;
-  margin: 10px auto; 
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   transition: 0.3s;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 
@@ -186,40 +153,11 @@ legend {
   background-color: rgb(1, 88, 1);
 }
 
-@media screen and (max-width: 768px) {
-  .column {
-    flex-wrap: nowrap; 
-  }
-  
-  .column .form-control {
-    width: 48%; 
-  }
-  legend {
-    font-size: 1rem;
-  }
-  fieldset {
-    font-size: 1rem;
-  }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+  -webkit-appearance: none;
 }
-@media screen and (max-width: 430px) {
-  .column {
-    flex-wrap: nowrap; 
-  }
-  
-  .column .form-control {
-    width: 98%; 
-  }
-  legend {
-    font-size: 0.8rem;
-  }
-  fieldset {
-    padding: 5px;
-    font-size: 0.8rem;
-  }
-  form{
-    width: 95%;
-    margin: 10px;
-  }
-}
+
+
 
 
