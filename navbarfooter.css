@@ -21,6 +21,7 @@ html{
 
 /* navbar */
 nav {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,6 +31,7 @@ nav {
     /* color: white; */
     /* border: 1px solid black; */
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    z-index: 9999;
 }
 .logo-part{
     max-width: 100px;
@@ -250,146 +252,180 @@ font-weight: 600;
     }
 }
 
-  /* Footer  */
-footer {
+ /* Footer Base */
+ footer {
     background-color: var(--heading-color);
-    color: white;
-    border-radius: 75px 0 75px 0;
-    margin-top: 150px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 50px 5%;
-    height: auto;
+    color: #fff;
+    padding: 50px 20px;
+    padding-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 45px 0 45px 0;
+    margin: 5px;
 }
 
-/* Footer content styles */
-footer .foot-box {
+/* Footer Container */
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 40px;
+    text-align: left;
 }
 
-/* Footer section styles */
-footer .foot-head,
-footer .links,
-footer .our-services,
-footer .social,
-footer .touch {
-    flex: 1 1 auto;
-    max-width: 250px;
-    margin-top: 25px;
+/* Footer Sections */
+.footer-section {
+    flex: 1;
+    min-width: 250px;
 }
 
-footer .foot-head h1 {
-    font-size: 1.5rem;
+.footer-section h1, 
+.footer-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #ffffff;
 }
 
-footer .foot-box p {
-    font-size: 0.8rem;
+.footer-section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #ddd;
 }
 
-footer .links p,
-footer .social p,
-footer .touch p,
-footer .our-services p {
-    font-size: 0.8rem;
+/* Links Styling */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
 }
 
-footer .links p,
-footer .our-services p {
-    margin-left: 0;
+.footer-section ul li {
+    margin-bottom: 8px;
 }
 
-/* Links styles */
-footer .links a,
-footer .our-services a,
-footer .social a {
-    color: white;
+.footer-section ul li a {
     text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 400;
-    display: block;
-    margin: 5px 0;
+    color: #f8f8f8;
+    transition: 0.3s ease-in-out;
 }
 
-/* Social links styles */
-footer .social a img {
-    width: 25px;
-    margin: 8px;
-    transition: 0.2s ease-in-out;
+.footer-section ul li a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
 }
 
-footer .social a img:hover {
-    transform: scale(1.15);
-}
-
-/* Input styles */
-footer .touch input {
+/* Social & Newsletter Wrapper */
+.social-newsletter-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     width: 100%;
-    border-radius: 8px;
-    padding: 5px;
-    margin-top: 10px;
 }
 
-footer .rights {
-    text-align: center;
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    background: #bbbbbb;
+}
+
+.social-icons img {
+    width: 18px;
+    height: 18px;
+    /* filter: invert(1); */
+}
+
+/* Newsletter */
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
     margin-top: 20px;
 }
 
-footer .rights span,
-footer .rights a {
-    font-size: 14px;
-    color: white;
+.newsletter input {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.newsletter button {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    background: #ffcc00;
+    border: none;
+    color: #333;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.newsletter button:hover {
+    background: #ffaa00;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.footer-bottom a {
+    color: #ffcc00;
     text-decoration: none;
     font-weight: bold;
 }
 
-footer hr {
-    margin: 10px 0 5px;
+.footer-bottom a:hover {
+    text-decoration: underline;
 }
-
+footer hr{
+    margin-top: 20px;
+    height: 5px;
+    background-color: white;
+    border-radius: 2px;
+}
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-    footer .foot-head,
-    footer .links,
-    footer .our-services,
-    footer .social,
-    footer .touch {
-        max-width: 100%;
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-}
 
-@media screen and (max-width: 430px) {
-    footer .foot-head h1 {
-        font-size: 1rem;
+    .footer-section {
+        min-width: 100%;
     }
     
-    footer .foot-box p {
-        font-size: 0.6rem;
+    .social-newsletter-wrapper {
+        align-items: center;
+        justify-content: center;
     }
-    
-    footer .links p,
-    footer .social p,
-    footer .touch p,
-    footer .our-services p {
-        font-size: 0.6rem;
-    }
-    
-    footer .links a,
-    footer .our-services a,
-    footer .social a {
-        font-size: 0.6rem;
-    }
-    
-    footer .rights span,
-    footer .rights a {
-        font-size: 14px;
-    }
-    
-    footer .rights p {
-        font-size: 12px;
-    }
-    
-    footer .social a img {
-        margin: 1px 5px;
+    .newsletter {
+        justify-content: center;
+        align-items: center;
     }
 }

@@ -33,7 +33,10 @@ html{
     background-color: white;
 }
 
-
+.content-of-page{
+  padding: 20px;
+  padding-top: 83px;
+}
 
 /* projects */
 .pro-head{
@@ -75,7 +78,7 @@ html{
 }
   
   .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
   
   .container {

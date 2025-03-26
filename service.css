@@ -31,19 +31,23 @@ html{
 
 }
 
-
+.content-of-page{
+  padding: 20px;
+  padding-top: 83px;
+}
 /*service*/
 
-.head{
-  padding: 80px 160px 30px 130px;
-}
+
 .head h1{
-  font-size: 1.6rem;
+  padding: 20px;
+  padding-bottom: 0px;
+  font-size: 24px;
 }
 .head p{
   font-size: 1rem;
+  padding: 20px;
 }
-.container{
+.service-part-box .container{
   position: relative;
   display: flex;
   justify-content: center;
@@ -55,7 +59,7 @@ html{
   border-radius: 20px;
   background-color: #FEFAF6;
 }
-.container .card{
+.service-part-box .container .card{
   position: relative;
   display: flex;
   align-items: center;
@@ -68,10 +72,10 @@ html{
   box-shadow: rgba(0, 0, 0, 0.46) 0px 3px 6px, rgba(0, 0, 0, 0.83) 0px 3px 6px;
   transition: 0.5s;
 }
-.container .card:hover{
+.service-part-box .container .card:hover{
   height: 340px;
 }
-.container .card .imgbx{
+.service-part-box .container .card .imgbx{
   position: absolute;
   width: 300px;
   height: 220px;
@@ -81,12 +85,12 @@ html{
   transition: 0.5s;
   overflow: hidden;
 }
-.container .card:hover .imgbx{
+.service-part-box .container .card:hover .imgbx{
   top: -90px;
   scale: 0.75;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
-.container .card .imgbx img{
+.service-part-box .container .card .imgbx img{
   position: absolute;
   top: 0;
   left: 0;
@@ -94,7 +98,7 @@ html{
   height: 100%;
   object-fit:contain;
 }
-.container .card .content{
+.service-part-box .container .card .content{
   position: absolute;
   top: 252px;
   width: 100%;
@@ -105,108 +109,23 @@ html{
   transition: 0.5s;
 }
 
-.container .card:hover .content{
+.service-part-box .container .card:hover .content{
   top: 130px;
   height: 230px;
 }
-.container .card  .content h3{
+.service-part-box .container .card  .content h3{
   font-size: 1rem;
 }
-.container .card .content p{
+.service-part-box .container .card .content p{
   font-size: 0.8rem;
   padding-bottom: 10px;
 }
-.container .card .content a{
+.service-part-box .container .card .content a{
   margin-top: 15px;
   font-size: 0.8rem;
   padding: 5px;
   border-radius: 10px;
   background-color: #339c5c;
 }
-@media screen and (max-width: 768px) {
-  .container .card .content h3{
-    font-size: 0.8rem;
-  }
-  .head h1{
-    font-size: 1.4rem;
-  }
-  .head p{
-    margin-top: 10px;
-    font-size: 0.8rem;
-  }
-  .container .card{
-    height: 280px;
-  }
-  .container .card  .content h3{
-    font-size: 1rem;
-  }
-}
-@media screen and (max-width: 430px) {
-  .container .card .imgbx{
-    width: 80%;
-  }
-  .head{
-    padding: 100px 50px 30px 50px;
-  }
-  .container{
-    margin: 0 30px 0 30px;
-  }
-  .container .card .content h3{
-    font-size: 0.8rem;
-  }
-  .head h1{
-    font-size: 1rem;
-  }
-  .head p{
-    margin-top: 10px;
-    font-size: 0.6rem;
-  }
-  .container .card{
-    height: 280px;
-  }
-  .container .card  .content h3{
-    font-size: 1rem;
-  }
-  .container .card .content p{
-    font-size: 0.6rem;
-  }
-}
-@media screen and (max-width: 430px) {
-  .container .card .imgbx{
-    width: 80%;
-  }
-  .head{
-    padding: 100px 50px 30px 50px;
-  }
-  .container{
-    margin: 0 30px 0 30px;
-  }
-  .container .card .content h3{
-    font-size: 0.8rem;
-  }
-  .head h1{
-    font-size: 1rem;
-  }
-  .head p{
-    margin-top: 10px;
-    font-size: 0.6rem;
-  }
-  .container .card{
-    height: 290px;
-  }
-  .container .card  .content h3{
-    font-size: 0.95rem;
-  }
-  .container .card .content p{
-    font-size: 0.55rem;
-  }
-}
-@media screen and (max-width: 430px) {
-  .container .card  .content h3{
-    font-size: 0.94rem;
-  }
-  .container .card .content p{
-    font-size: 0.55rem;
-  }
-}
+
 

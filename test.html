@@ -1,184 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Parent container */
+    .story-flex-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    
+    /* Static images (display normally) */
+    .static-images {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .image {
+        width: 450px;
+        height: 250px;
+        border-radius: 10px;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Slideshow (hidden by default) */
+    .slideshow-container {
+        display: none;
+        width: 450px;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .slideshow-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        display: none;
+    }
+    
+    /* Responsive: Switch to slider on smaller screens */
+    @media (max-width: 768px) {
+        .story-flex-container {
+            flex-direction: column;
         }
-        .masterpagesnavbar{
-    position: fixed;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;  
-    background-color: white;
-    z-index: 10;
-    width: 100%;
-    top: 0;
-  }
-  
-  .mainlogo{
-    color: rgb(0,123,255);
-    font-size: 20px;
-    font-weight: bolder;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  nav .mainlogo:hover{
-    background-color: white ;
-  }
-  
-  .mainlogo img{
-    max-width: 190px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  nav ul{
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  nav li{
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  nav a{
-    font-weight: 500;
-    height: 100%;
-    padding: 0 30px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: black;
-    font-size: clamp(16px,3vw,16px);
-  }
-  
-  nav a:hover{
-    background-color: #e7e7e7;
-  }
-  
-  nav .login div{
-    cursor: pointer;
-    transition: all 200ms ease-in-out;
-    padding: 5px 10px;
-    color: whitesmoke;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: #fc6933;
-  }
-  
-  nav a.login:hover{
-    background-color: white;
-  }
-  
-  nav li:first-child{
-    margin-right: auto;
-  }
-  
-  .masternavbarnav{
-    position: fixed;
-    top: 0; 
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    background-color: white;
-    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    z-index: 20;
-  }
-  
-  .masternavbarnav li{
-    width: 100%;
-  }
-  
-  .masternavbarnav a{
-    width: 100%;
-  }
-  
-  .fa-xmark, .fa-bars{
-    font-size: 22px;
-  }
-  
-  .menu-button{
-    display: none;
-  }
-  
-  @media(max-width: 800px){
-    .hideOnMobile{
-      display: none;
+        
+        .static-images {
+            display: none; /* Hide normal images */
+        }
+    
+        .slideshow-container {
+            display: block; /* Show slider */
+        }
     }
-    .menu-button{
-      display: block;
-    }
-  }
-  
-  @media(max-width: 400px){
-    .mainlogo img{
-      max-width: 180px;
-      width: 100%;
-    }
-  
-    .masternavbarnav{
-      width: 100%;
-    }
-  }
-  
     </style>
 </head>
 <body>
-    <nav class="masterpagesnavbar">
-        <ul class="masternavbarnav">
-          <li onclick="hideNavbar()"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
-          <li><a href="../html/kikiclickadshome.html">Home</a></li>
-          <li><a href="../html/aboutus.html">About Us</a></li>
-          <li><a href="../html/loginoption.html">Ads</a></li>
-          <li><a href="../html/homegetplans.html">Get Plans</a></li>
-          <li><a href="../html/contact.html">Contact</a></li>
-          <li><a href="../html/loginoption.html" class="login"><div>Login</div></a></li> 
-        </ul>
-        <ul>
-          <li><a class="mainlogo" href="../html/kikiclickadshome.html"><img src="../login_icon/kikiclicklogo.png" alt=""></a></li>
-          <li class="hideOnMobile"><a href="../html/kikiclickadshome.html">Home</a></li>
-          <li class="hideOnMobile"><a href="../html/aboutus.html">About Us</a></li>
-          <li class="hideOnMobile"><a href="../html/loginoption.html">Ads</a></li>
-          <li class="hideOnMobile"><a href="../html/homegetplans.html">Get Plans</a></li>
-          <li class="hideOnMobile"><a href="../html/contact.html">Contact us</a></li>
-          <li class="hideOnMobile"><a href="../html/loginoption.html" class="login"><div>Login</div></a></li>
-          <li class="menu-button" onclick="showNavbar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
-            
-        </ul>
-      </nav>
+  <div class="about-us-content-box">
+    <div class="about-in-box">
+        <section class="story-container">
+            <div class="story-header">
+                <h3 class="est-year">EST 2018</h3>
+                <h1 class="section-title">Our Story</h1>
+            </div>
 
-      <script>
-        function showNavbar() {
-  const navbar = document.querySelector('.masternavbarnav');
-  navbar.style.display = 'flex';
+            <!-- Flex Container for Image + Story Content -->
+            <div class="story-flex-container">
+                <!-- Image Container -->
+                <div class="image-container" id="imageContainer">
+                    <div class="static-images" id="staticImages">
+                        <img src="./about/openplots.jpg" class="image" alt="Story Image">
+                        <img src="./about/residential.jpg" class="image" alt="Story Image">
+                        <img src="./about/villa.jpg" class="image" alt="Story Image">
+                        <img src="./about/complex.jpeg" class="image" alt="Story Image">
+                    </div>
+
+                    <!-- Slideshow (hidden initially) -->
+                    <div class="slideshow-container" id="slideshowContainer">
+                        <div class="mySlides fade">
+                            <img src="./about/openplots.jpg">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="./about/residential.jpg">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="./about/villa.jpg">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="./about/complex.jpeg">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story Content -->
+                <div class="story-content">
+                    <div class="story-item">
+                        <h4>🏗️ Establishment & Leadership</h4>
+                        <p>Yuktha Constructions was founded in 2018 by Vijay Sampangi, an MBA & MHM holder.</p>
+                    </div>
+                    <div class="story-item">
+                        <h4>🏡 Mission for Middle Class</h4>
+                        <p>Dedicated to providing affordable housing solutions for middle-class employees.</p>
+                    </div>
+                    <div class="story-item">
+                        <h4>✔️ Commitment to Quality</h4>
+                        <p>Uncompromising focus on delivering high-quality residences with modern amenities.</p>
+                    </div>
+                    <div class="story-item">
+                        <h4>📌 Project Portfolio</h4>
+                        <p>Completed 4 residential projects, 12 independent houses, 3 villas, and 2 commercial complexes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+<script>
+// JavaScript for Image Slider
+let slideIndex = 0;
+
+function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
-function hideNavbar() {
-  const navbar = document.querySelector('.masternavbarnav');
-  navbar.style.display = 'none';
+// Detect screen size change
+function checkScreenSize() {
+    if (window.innerWidth <= 768) {
+        showSlides();
+    }
 }
 
-      </script>
+window.addEventListener("resize", checkScreenSize);
+window.addEventListener("load", checkScreenSize);
+</script>
+
 </body>
 </html>

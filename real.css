@@ -33,7 +33,9 @@ html{
     scroll-padding-top:6rem ;
     background-color: white;
 }
-
+.content-of-page{
+  padding-top: 83px;
+}
 .home{
   display: flex;
   flex-direction: column;
