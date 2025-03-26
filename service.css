@@ -32,24 +32,24 @@ html{
 }
 
 .content-of-page{
-  padding: 20px;
+  /* padding: 20px; */
   padding-top: 83px;
 }
 /*service*/
 
 
 .head h1{
-  padding: 20px;
+  padding: 20px 20px;
   padding-bottom: 0px;
   font-size: 24px;
 }
 .head p{
   font-size: 1rem;
-  padding: 20px;
+  padding: 20px 20px;
 }
 .service-part-box {
   /* text-align: center; */
-  padding: 10px 0px;
+  padding: 10px 20px;
   padding-bottom: 20px;
   background-color: #FEFAF6;
 }
