@@ -45,58 +45,85 @@ html{
 .pro-head h1{
   font-size: 1.4rem;
 }
-.card .container h4, p{
+.card .container h4, .container p{
   font-size: 0.7rem;
   
 }
 .projects{
     padding: 0px 20px;  
 }
-.compt-pro{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 30px;
-    
+/* Projects Container */
+.projects {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
+
+/* Flexbox Layout for Cards */
+.compt-pro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Individual Card */
 .card {
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    transition: 0.3s;
-    max-width: 280px;
-    width: 100%;
-    height: 360px;
-    text-align: center;
-    border: 1px solid rgb(187, 187, 187);
-    border-radius: 10px;
-  }
-.card img{
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 8px 8px 0px 0px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 290px; /* Set a fixed width */
 }
-  
-  .card:hover {
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+/* Card Hover Effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+/* Image Styling */
+.card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-bottom: 4px solid #007BFF;
+}
+
+/* Card Details */
+.details {
+  padding: 5px 2px;
+  text-align: center;
+}
+
+.details h3 {
+  font-size: 16px;
+  margin: 2px 0;
+  color: #333;
+}
+
+.details p {
+  font-size: 16px;
+  color: #777;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .compt-pro {
+      justify-content: center;
   }
   
-  .container {
-    padding: 2px 10px;
+  .card {
+      width: 100%; /* Cards take full width on smaller screens */
   }
-  .container>span{
-    font-size: 18px;
-    font-weight: 500;
-  }
-  .container>p{
-    font-size: 14px;
-    font-weight: 500;
-    color: rgb(77, 77, 77);
-  }
+}
+
 
   /* news */
   .news-head{
-    font-size: 1.4rem;
+    font-size: 24px;
     padding: 20px;
     margin-top: 20px;
   }
@@ -104,32 +131,55 @@ html{
     padding: 0px 20px;
   }
 
-  .article{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 30px;
+  /* News Section */
+.news {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Article Container */
+.article {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual Article Card */
+.art-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 280px;
+}
+
+/* Hover Effect */
+.art-card:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+/* Image Styling */
+.art-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: contain;
+  border-bottom: 4px solid #007BFF;
+}
+
+@media (max-width: 768px) {
+  .article {
+      flex-direction: column;
+      align-items: center;
   }
-  .art-card{
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    transition: 0.3s;
-    width: 250px;
-    height: 330px;
-    text-align: center;
-    border: 1px solid rgb(187, 187, 187);
-    border-radius: 10px;
+
+  .art-card {
+      width: 100%;
   }
-  .art-card:hover{
-    transform: scale(1.05);
-  }
-  .art-card img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-  }
- 
+}
 
   /* ventures */
   .venture{
@@ -142,111 +192,81 @@ html{
     font-size: 1.4rem;
     padding: 20px;
   }
-  .venture-outbox{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    border: 1px solid rgb(187, 187, 187);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  .venture-box{
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    transition: 0.3s;
-    width: 700px;
-    height: 400px;
-    text-align: center;
-    border: 1px solid rgb(187, 187, 187);
-    border-radius: 10px;
-  }
-  .venture-box img{
-    max-width: 700px;
-    width: 100%;
-    height: 340px;
-    object-fit: cover;
-    border-radius: 8px 8px 0px 0px;
-  }
-  .venture-box2{
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    transition: 0.3s;
-    max-width: 450px;
-    width: 100%;
-    height: 400px;
-    text-align: center;
-    border: 1px solid rgb(187, 187, 187);
-    border-radius: 10px;
-    padding-bottom: 10px;
-  }
-  .venture-box2 img{
-    max-width: 450px;
-    width: 100%;
-    height: 340px;
-    object-fit: cover;
-    border-radius: 8px 8px 0px 0px;
-  }
-  .venture-box3{
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    transition: 0.3s;
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
-    border: 1px solid rgb(187, 187, 187);
-    border-radius: 10px;
-    padding-bottom: 10px;
-  }
-  .venture-box3 img{
-    width: 100%;
-    object-fit: cover;
-    border-radius: 8px 8px 0px 0px;
-  }
-  .venture-boxtukka{
-    transition: 0.3s;
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
-    border-radius: 10px;
-    border: 1px solid rgb(187, 187, 187);
-    /* border: 1px solid rgb(136, 136, 136); */
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  }
 
-  /* .venture-box3, .venture-boxtukka{
-    border-radius: 10px;
+.venture-container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding-bottom: 10px;
-  } */
-  .venture-box3, .venture-boxtukka img{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    object-fit: cover;
-  }
-  /* Silpa */
-  .venture-silpa{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
     gap: 20px;
-    /* border: 1px solid rgb(136, 136, 136);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
-    padding: 0px 20px;
-    border-radius: 10px;
-  }
-  .venture-silpa .venture-box4{
+    flex-wrap: wrap;
+}
+
+.venture-box {
+    max-width: 550px;
+    width: 100%;
+    height: 350px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    transition: 0.3s;
-    width: 400px;
-    height: 200px;
     text-align: center;
-    border: 1px solid rgb(187, 187, 187);
-    border-radius: 10px;
-  }
+}
+.venture-box:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.venture-box img {
+    width: 100%;
+    height: 280px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.venture-box h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #135D66;
+}
+
+.venture-highlight {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.venture-card {
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    text-align: center;
+}
+.venture-card:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.venture-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.venture-card h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #135D66;
+}
+
+.venture-card p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px;
+}
+  
+  /* Silpa */
+  
   .silpa-head{
     padding: 20px 0px;
     margin-top: 20px;
@@ -258,24 +278,70 @@ html{
   .venture-box4 h2{
     font-size: 1rem;
   }
-  .venture-silpa img{
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px 8px 0px 0px;
+
+.venture-silpa {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.venture-box4 {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.venture-box4:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.venture-box4 img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 4px solid #007BFF;
+}
+
+/* Title Styling */
+.venture-box4 h2 {
+  font-size: 18px;
+  color: #333;
+  padding: 10px;
+  padding-top: 5px;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .venture-silpa {
+      flex-direction: column;
+      align-items: center;
   }
+
+  .venture-box4 {
+      width: 100%; /* Full width on smaller screens */
+  }
+}
+
   .video-container {
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .video-container iframe {
-  border-radius: 20px;
+  border-radius: 10px;
   max-width: 900px;
   width: 100%;
-  height: 415px;
+  height: 400px;
 }
 
 
