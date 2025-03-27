@@ -1,31 +1,22 @@
-var modal = document.getElementById("quoteModal");
+document.addEventListener("DOMContentLoaded", function () {
+  const quoteModal = document.getElementById("quoteModal");
+  const quoteOpenBtn = document.getElementById("quoteGetBtn");
+  const quoteCloseBtn = document.querySelector(".quote-close");
 
-var btn = document.getElementById("getQuoteBtn");
+  // Open modal when clicking "Get Quote" button
+  quoteOpenBtn.addEventListener("click", function () {
+      quoteModal.style.display = "flex";
+  });
 
-var span = document.getElementsByClassName("close")[0];
+  // Close modal when clicking the close button
+  quoteCloseBtn.addEventListener("click", function () {
+      quoteModal.style.display = "none";
+  });
 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-document.getElementById("quoteForm").onsubmit = function(event) {
-  event.preventDefault(); 
-  
-  var formData = new FormData(this);
-  
-  
-  console.log("Form submitted with data:", formData);
-  
-  
-  modal.style.display = "none";
-}
+  // Close modal when clicking outside the content
+  window.addEventListener("click", function (event) {
+      if (event.target === quoteModal) {
+          quoteModal.style.display = "none";
+      }
+  });
+});

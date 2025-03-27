@@ -58,6 +58,7 @@ nav {
     min-width: 45px;
     max-width: 60px;
     width: 100%;
+    cursor: pointer;
 }
 .nav-social-part{
     display: flex;
@@ -175,6 +176,7 @@ font-weight: 600;
     color: #2C70B9;
     font-size: 1rem;
     font-weight: 500;
+    text-transform: uppercase;
 }
 .sidebar ul li:hover {
     background: rgb(227, 227, 227);

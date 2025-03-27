@@ -15,7 +15,7 @@
     <header>
         <nav>
             <div class="logo-part">
-                <img src="./logoc.png" alt="Logo">
+                <img src="./logoc.png" alt="Logo" id="yukthacont-logo">
             </div>
             <div class="nav-social-part">
                 <ul class="menu">
@@ -62,111 +62,113 @@
         </div>
     </header>
 
-    <div class="material">
-        <div>
-            <a href="yukthaservices.html">Back to Services</a>
-        </div>
+    <div class="content-of-page">
+        <div class="material">
+            <div class="back">
+                <a href="yukthaservices.html">Back to Services</a>
+            </div>
+    
+            <div class="box">
+                <h1>CONSTRUCTION PACKAGES</h1>
+                <p>Discover the essential raw materials needed to construct your dream home, ensuring a perfect blend of durability,
+                    functionality, and aesthetic appeal.</p>
+                <div class="outer-box">
+                    <div class="quote">
+                        <img src="click.gif" alt="">
 
-        <div class="box">
-            <h1>CONSTRUCTION PACKAGES</h1>
-            <p>Discover the essential raw materials needed to construct your dream home, ensuring a perfect blend of durability, functionality, and aesthetic appeal.</p>
-            <div class="outer-box">
-                <div class="quote">
-                    <img src="click.gif" alt="">
-                    <!-- model for get qoute -->
-                    <button id="getQuoteBtn">Get Quote</button>
+                        <!-- Get Quote Button -->
+                        <button id="quoteGetBtn">Get Quote</button>
 
-                        <div id="quoteModal" class="modal">
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <form id="quoteForm">
-                                <div class="form-group">
-                                    <label for="name">Name:</label>
-                                    <input type="text" id="name" name="name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone Number:</label>
-                                    <input type="tel" id="phone" name="phone" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="package">Package:</label>
-                                    <select id="package" name="package">
-                                        
-                                        <option value="Basic">Basic</option>
-                                        <option value="Classic">Classic</option>
-                                        <option value="Premium">Premium</option>
-                                        <option value="Royale">Royale</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="location">Preferred Location:</label>
-                                    <input type="text" id="location" name="location">
-                                </div>
-                                <div class="form-group">
-                                    <label for="area">Land Area:</label>
-                                    <input type="text" id="area" name="area">
-                                </div>
-                                <div class="form-group">
-                                    <input type="submit" value="Submit">
-                                </div>
-                            </form>
-                        </div>
-                        </div>
-                        <script src="modal.js"></script>
-
-                    <!-- modal end -->
-
-
-                </div>
-                <div class="row">
-                    
-                    <div class="package">
-                        <div class="pack-head">
-                            
-                            <h5>Basic Package</h5>
-                            <h4> Rs.1,890/sq.ft (Incl. GST)</h4>
-                        </div>
-                        <div class="packagedetails">
-
-                            <div class="details">
-                                <div class="label">• Designs & Drawings</div>
-                                    <div class="content">
-                                    <p> Architectural Layout | 2D 
-                                    <p> Basic Elevation </p>
-                                    <p> Structural Design </p>
-                                    <p> 3D Elevation</p> 
-                                    <p>Electrical Drawings</p>
-                                    <p>Plumbing Drawings</p>
+                        <!-- Modal -->
+                        <div id="quoteModal" class="quote-modal">
+                            <div class="quote-modal-content">
+                                <span class="quote-close">&times;</span>
+                                <div class="quote-head">Get Quote</div>
+                                <form id="quoteForm">
+                                    <div class="quote-form-group">
+                                        <label for="quoteName">Full Name:</label>
+                                        <input type="text" id="quoteName" name="name" placeholder="Enter full name">
                                     </div>
-                                
+                                    <div class="quote-form-group">
+                                        <label for="quotePhone">Phone Number:</label>
+                                        <input type="tel" id="quotePhone" name="phone" placeholder="Enter phone number">
+                                    </div>
+                                    <div class="quote-form-group">
+                                        <label for="quotePackage">Package:</label>
+                                        <select id="quotePackage" name="package">
+                                            <option value="Basic">Basic</option>
+                                            <option value="Classic">Classic</option>
+                                            <option value="Premium">Premium</option>
+                                            <option value="Royale">Royale</option>
+                                        </select>
+                                    </div>
+                                    <div class="quote-form-group">
+                                        <label for="quoteLocation">Preferred Location:</label>
+                                        <input type="text" id="quoteLocation" name="location" placeholder="Enter your location">
+                                    </div>
+                                    <div class="quote-form-group">
+                                        <label for="quoteArea">Land Area:</label>
+                                        <input type="text" id="quoteArea" name="area" placeholder="Enter area of land (Sqft)">
+                                    </div>
+                                    <div class="quote-form-group">
+                                        <input type="submit" value="Submit" class="quote-submit-btn">
+                                    </div>
+                                </form>
                             </div>
+                        </div>
 
-                            <div class="details">
-                                <div class="label">• Bathroom</div>
+                    </div>
+
+                    <div class="row">
+                        
+                        <!-- pack 1 basic -->
+                        <div class="package">
+                            <div class="pack-head">
+                    
+                                <h5>Basic Package</h5>
+                                <h4> Rs.1,890/sq.ft (Incl. GST)</h4>
+                            </div>
+                            <div class="packagedetails">
+                    
+                                <div class="details">
+                                    <div class="label">• Designs & Drawings</div>
+                                    <div class="content">
+                                        <p> Architectural Layout | 2D
+                                        <p> Basic Elevation </p>
+                                        <p> Structural Design </p>
+                                        <p> 3D Elevation</p>
+                                        <p>Electrical Drawings</p>
+                                        <p>Plumbing Drawings</p>
+                                    </div>
+                    
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Bathroom</div>
                                     <div class="content">
                                         <p> Ceramic Wall Dado upto 7' height- Upto Rs.60 per Sqft</p>
                                         <p> Sanitarywares & CP fittings upto Rs. 50,000 per 1000 Sqft of Parry Hindware make</p>
-                                        <p> CPVC Pipe -  Ashirwad or Supreme or Equivalent</p>
+                                        <p> CPVC Pipe - Ashirwad or Supreme or Equivalent</p>
                                         <p> Bathroom doors - Waterproof flush doors or WPC</p>
-                                        
+                    
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">•  Structure</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Structure</div>
                                     <div class="content">
-                                        
+                    
                                         <p>Steel - Vizag or equivalent</p>
                                         <p> Cement - Ramco or Zuari or equivalent of 43 or 53 grade</p>
-                                        <p>  Aggregates - 20mm & 40mm</p>
-                                        <p> Blocks - Standard Red Bricks. 9 inch & 4 inch </p>   
-                                        <p> RCC Design Mix - M25 or As per the structural designer recommendation</p>     
-                                        <p> Ceiling Height - 10 feet (Finished Floor level to Finished Floor level)</p>  
+                                        <p> Aggregates - 20mm & 40mm</p>
+                                        <p> Blocks - Standard Red Bricks. 9 inch & 4 inch </p>
+                                        <p> RCC Design Mix - M25 or As per the structural designer recommendation</p>
+                                        <p> Ceiling Height - 10 feet (Finished Floor level to Finished Floor level)</p>
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Doors & Windows</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Doors & Windows</div>
                                     <div class="content">
                                         <p> Windows - UPVC Windows with
                                             glass and mesh shutters (3 track
@@ -178,39 +180,39 @@
                                             Flush Door with Laminates upto
                                             Rs.9,000 including fixtures. Door
                                             Frames of Sal Wood 4 inch by 2.5 inch.</p>
-                                        
-                                        
+                    
+                    
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">•  Kitchen</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Kitchen</div>
                                     <div class="content">
                                         <p> Ceramic Wall Dado - Upto Rs.60 per Sqft</p>
                                         <p> Main Sink Faucet - Upto Rs.2000 Any other Faucet or Accessories -ISI Marked</p>
                                         <p> Kitchen Sink - Stainless Steel of
                                             Single Sink make worth Rs. 6,000</p>
-                                        
-                                        
+                    
+                    
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Painting</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Painting</div>
                                     <div class="content">
                                         <p> Interior Painting - JK Putty + Tractor Shyne
                                             Emulsion or equivalent</p>
                                         <p> Exterior Painting - Asian Primer +
                                             Apex Exterior emulsion Paint or
                                             equivalent</p>
-                                    
+                    
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Flooring</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Flooring</div>
                                     <div class="content">
-                                        <p> Living & Dining Flooring -  Tiles or
+                                        <p> Living & Dining Flooring - Tiles or
                                             Granite of value upto Rs.100 per sqft</p>
                                         <p>Rooms & Kitchen Flooring - Tiles of
                                             value upto Rs.80 per sqft</p>
@@ -219,23 +221,23 @@
                                         <p> Staircase Flooring - Sadarahalli
                                             Granite of value upto ₹ 80 per sqft</p>
                                         <p>Parking Tiles - Anti-skid tiles of
-                                            value upto ₹ 50 per sqft</p>   
-                                        
+                                            value upto ₹ 50 per sqft</p>
+                    
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">•  Electrical</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Electrical</div>
                                     <div class="content">
                                         <p> Wires - Fireproof wires by Finolex</p>
                                         <p>Switches & Sockets - Polycab Levana or equivalent UPS Wiring Provision</p>
-
-                                        
+                    
+                    
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Miscellaneous</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Miscellaneous</div>
                                     <div class="content">
                                         <p> Overhead Tank - Double Layered
                                             tank of 1500 Ltrs of Duratank
@@ -244,62 +246,62 @@
                                         <p> Staircase Railing - MS Railing</p>
                                         <p> Window Grills - Basic MS Grill
                                             with enamel Paint at Rs. 180 per Sqft</p>
-                                    
+                    
                                     </div>
+                                </div>
+                    
+                    
+                    
+                    
                             </div>
-
+                        </div>
+                    
+                        <!-- pack 2 classic -->
+                        <div class="package">
+                            <div class="pack-head">
+                                <h5>Classic Package</h5>
+                                <h4> Rs.2,050/sq.ft (Incl. GST)</h4>
+                            </div>
+                            <div class="packagedetails">
                             
-
-
-                        </div>
-                    </div>
-
-                    <!-- pack 2 classic -->
-                    <div class="package">
-                        <div class="pack-head">
-                            <h5>Classic Package</h5>
-                            <h4> Rs.2,050/sq.ft (Incl. GST)</h4>
-                        </div>
-                        <div class="packagedetails">
-
-                            <div class="details">
-                                <div class="label">• Designs & Drawings</div>
+                                <div class="details">
+                                    <div class="label">• Designs & Drawings</div>
                                     <div class="content">
-                                    <p> Architectural Layout | 2D </p>
-                                    <p> Basic Elevation </p>
-                                    <p> Structural Design </p>    
-                                    <p>3D Elevation</p>     
-                                    <p>Electrical Drawings</p>
-                                    <p>Plumbing Drawings</p>
+                                        <p> Architectural Layout | 2D </p>
+                                        <p> Basic Elevation </p>
+                                        <p> Structural Design </p>
+                                        <p>3D Elevation</p>
+                                        <p>Electrical Drawings</p>
+                                        <p>Plumbing Drawings</p>
                                     </div>
-                                
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Bathroom</div>
+                            
+                                </div>
+                            
+                                <div class="details">
+                                    <div class="label">• Bathroom</div>
                                     <div class="content">
                                         <p> Ceramic Wall Dado upto 7' height- Upto Rs.60 per Sqft</p>
                                         <p> Sanitarywares & CP fittings upto Rs. 50,000 per 1000 Sqft of Parryware make</p>
-                                        <p> CPVC Pipe -  Ashirwad or Supreme or Equivalent</p>
+                                        <p> CPVC Pipe - Ashirwad or Supreme or Equivalent</p>
                                         <p> Bathroom doors - Waterproof flush doors or WPC</p>
-                                        
-                            </div>
-
-                            <div class="details">
-                                <div class="label">•  Structure</div>
+                            
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <div class="label">• Structure</div>
                                     <div class="content">
-                                        
+                            
                                         <p>Steel - Vizag or equivalent</p>
                                         <p> Cement - Ramco or Zuari or equivalent of 43 or 53 grade</p>
-                                        <p>  Aggregates - 20mm & 40mm</p>
-                                        <p> Blocks - Standard Red Bricks. 9 inch & 4 inch </p>   
-                                        <p> RCC Design Mix - M25 or As per the structural designer recommendation</p>     
-                                        <p> Ceiling Height - 10 feet (Finished Floor level to Finished Floor level)</p> 
+                                        <p> Aggregates - 20mm & 40mm</p>
+                                        <p> Blocks - Standard Red Bricks. 9 inch & 4 inch </p>
+                                        <p> RCC Design Mix - M25 or As per the structural designer recommendation</p>
+                                        <p> Ceiling Height - 10 feet (Finished Floor level to Finished Floor level)</p>
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Doors & Windows</div>
+                                </div>
+                            
+                                <div class="details">
+                                    <div class="label">• Doors & Windows</div>
                                     <div class="content">
                                         <p> Windows - UPVC Windows with
                                             glass and mesh shutters (3 track
@@ -313,43 +315,43 @@
                                             Rs.9,000 including fixtures. Door
                                             Frames of Sal Wood 4 inch by 2.5
                                             inch.</p>
-                                        
+                            
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">•  Kitchen</div>
+                                </div>
+                            
+                                <div class="details">
+                                    <div class="label">• Kitchen</div>
                                     <div class="content">
                                         <p> Ceramic Wall Dado - Upto Rs.60 per Sqft</p>
-                                        <p> Main Sink Faucet - Upto Rs.2000 
+                                        <p> Main Sink Faucet - Upto Rs.2000
                                             Any other Faucet or Accessories -ISI Marked</p>
                                         <p> Kitchen Sink - Stainless Steel of
                                             Single Sink make worth Rs. 6,000 </p>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Painting</div>
+                            
+                                <div class="details">
+                                    <div class="label">• Painting</div>
                                     <div class="content">
                                         <p> Interior Painting - JK Putty + Tractor Shyne Emulsion or equivalent</p>
-                                            
+                            
                                         <p> Exterior Painting - Asian Primer +
                                             Apex Exterior emulsion Paint or
                                             equivalent</p>
-                                    
+                            
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Flooring</div>
+                                </div>
+                            
+                                <div class="details">
+                                    <div class="label">• Flooring</div>
                                     <div class="content">
                                         <p> Living & Dining Flooring - Tiles or
                                             Granite of value upto Rs.100 per
                                             sqft
-                                            </p>
+                                        </p>
                                         <p>Rooms & Kitchen Flooring - Tiles of
                                             value upto Rs.80 per sqft
-                                            </p>
+                                        </p>
                                         <p> Balcony and Open Areas Flooring -
                                             Anti-skid tiles of value upto Rs.60
                                             per sqft</p>
@@ -357,91 +359,89 @@
                                             Granite of value upto ₹ 80 per sqf</p>
                                         <p>Parking Tiles - Anti-skid tiles of
                                             value upto ₹ 50 per sqft
-                                            </p>   
-                                        
+                                        </p>
+                            
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">•  Electrical</div>
+                                </div>
+                            
+                                <div class="details">
+                                    <div class="label">• Electrical</div>
                                     <div class="content">
                                         <p> Wires - Fireproof wires by Finolex</p>
-                                        <p>Switches & Sockets-  Polycab
+                                        <p>Switches & Sockets- Polycab
                                             Levana or equivalent</p>
-                                        <p>UPS Wiring Provision</p>   
-
-                                        
+                                        <p>UPS Wiring Provision</p>
+                            
+                            
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Miscellaneous</div>
+                                </div>
+                            
+                                <div class="details">
+                                    <div class="label">• Miscellaneous</div>
                                     <div class="content">
                                         <p> Overhead Tank - Double Layered
                                             tank of 1500 Ltrs of Duratank make</p>
                                         <p>Underground Sump - 6000 Ltrs</p>
                                         <p> Staircase Railing - MS Railing</p>
                                         <p>Window Grills - Basic MS Grill with
-                                            enamel Paint at Rs. 180 per Sqft</p>    
-                                    
+                                            enamel Paint at Rs. 180 per Sqft</p>
+                            
                                     </div>
+                                </div>
+                            
+                            
                             </div>
-
                         </div>
-                    </div>
-                    </div>
 
-
-
-
-                    <!-- pack 3  premium-->
-                    <div class="package">
-                        <div class="pack-head">
-                            <h5>Premium Package</h5>
-                            <h4> Rs.2,440/sq.ft (Incl. GST)</h4>
-                        </div>
-                        <div class="packagedetails">
-
-                            <div class="details">
-                                <div class="label">• Designs & Drawings</div>
+                        <!-- pack 3  premium-->
+                        <div class="package">
+                            <div class="pack-head">
+                                <h5>Premium Package</h5>
+                                <h4> Rs.2,440/sq.ft (Incl. GST)</h4>
+                            </div>
+                            <div class="packagedetails">
+                    
+                                <div class="details">
+                                    <div class="label">• Designs & Drawings</div>
                                     <div class="content">
-                                    <p> Architectural Layout | 2D </p>
-                                    <p> Basic Elevation </p>
-                                    <p> Structural Design </p>    
-                                    <p>3D Elevation</p>     
-                                    <p>Electrical Drawings</p>
-                                    <p>Plumbing Drawings</p>
+                                        <p> Architectural Layout | 2D </p>
+                                        <p> Basic Elevation </p>
+                                        <p> Structural Design </p>
+                                        <p>3D Elevation</p>
+                                        <p>Electrical Drawings</p>
+                                        <p>Plumbing Drawings</p>
                                     </div>
-                                
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Bathroom</div>
+                    
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Bathroom</div>
                                     <div class="content">
                                         <p> Ceramic Wall Dado upto 7' height- Upto Rs.80 per Sqft</p>
                                         <p> Sanitarywares & CP fittings upto Rs. 70,000 per 1000 Sqft of Jaquar make</p>
-                                        <p> CPVC Pipe -  Ashirwad or Supreme or Equivalent</p>
+                                        <p> CPVC Pipe - Ashirwad or Supreme or Equivalent</p>
                                         <p> Bathroom doors - Waterproof flush doors or WPC</p>
                                         <p>Mirror, Soap Dish, Towel Rail - Worth Rs. 7,000 till 1000 ft of Construction</p>
                                         <p>Solar water heater provision</p>
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">•  Structure</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Structure</div>
                                     <div class="content">
-                                        
+                    
                                         <p>Steel - Vizag or equivalent</p>
                                         <p> Cement - Ultratech or equivalent of 43 or 53 grade</p>
-                                        <p>  Aggregates - 20mm & 40mm</p>
-                                        <p> Blocks - Standard Red Bricks. 9 inch & 4 inch </p>   
-                                        <p> RCC Design Mix -ACC or Ultratech M25 or As per the structural designer recommendation</p>     
-                                        <p> Ceiling Height - 10 feet (Finished Floor level to Finished Floor level)</p> 
+                                        <p> Aggregates - 20mm & 40mm</p>
+                                        <p> Blocks - Standard Red Bricks. 9 inch & 4 inch </p>
+                                        <p> RCC Design Mix -ACC or Ultratech M25 or As per the structural designer recommendation
+                                        </p>
+                                        <p> Ceiling Height - 10 feet (Finished Floor level to Finished Floor level)</p>
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Doors & Windows</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Doors & Windows</div>
                                     <div class="content">
                                         <p> Windows - UPVC Windows with
                                             glass and mesh shutters (3 track
@@ -455,42 +455,42 @@
                                             upto Rs.12,000 including fixtures.
                                             Door Frames of Sal Wood 4 inch
                                             by 3 inch.
-                                            </p>
+                                        </p>
                                         <p> 1 Pooja Room Door - Burma Teak
                                             along with Teak frame of 5inch by
                                             2.5 inch, worth Rs. 31,000 for
                                             every 2,000 sft package area</p>
-                                        
+                    
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">•  Kitchen</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Kitchen</div>
                                     <div class="content">
                                         <p> Ceramic Wall Dado - Upto Rs.80 per Sqft</p>
-                                        <p> Main Sink Faucet - Upto Rs.3500 
+                                        <p> Main Sink Faucet - Upto Rs.3500
                                             Any other Faucet or Accessories -ISI Marked</p>
                                         <p> Kitchen Sink of Stainless Steel or granite
                                             Finish worth Rs. 8,000 (Futura, Carysil)</p>
-                                        
-                                        
+                    
+                    
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Painting</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Painting</div>
                                     <div class="content">
                                         <p> Interior Painting - JK Putty + Apcolite Premium Emulsion or equivalent</p>
-                                            
+                    
                                         <p> Exterior Painting - Asian Primer +
                                             Ace Exterior emulsion Paint or
                                             equivalent</p>
-                                    
+                    
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Flooring</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Flooring</div>
                                     <div class="content">
                                         <p> Living & Dining Flooring - Tiles or
                                             Granite or Marble of value upto Rs.140
@@ -503,24 +503,24 @@
                                         <p> Staircase Flooring - Sadarahalli Granite
                                             of value upto ₹ 110 per sqft</p>
                                         <p>Parking Tiles - Anti-skid tiles of value
-                                            upto ₹ 70 per sqft</p>   
-                                        
+                                            upto ₹ 70 per sqft</p>
+                    
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">•  Electrical</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Electrical</div>
                                     <div class="content">
                                         <p> Wires - Fireproof wires by Finolex</p>
                                         <p>Switches & Sockets- Legrand
                                             Lyncus or equivalent</p>
-
-                                        
+                    
+                    
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Miscellaneous</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Miscellaneous</div>
                                     <div class="content">
                                         <p> Overhead Tank - Double Layered
                                             tank of 2000 Ltrs of Sintex / Apollo
@@ -529,69 +529,69 @@
                                         <p> Staircase Railing - SS (Stainless)
                                             Railing of SS 304 grade profiles</p>
                                         <p>Window Grills - Basic MS Grill with
-                                            enamel Paint at Rs. 180 per Sqft</p>    
-                                    
+                                            enamel Paint at Rs. 180 per Sqft</p>
+                    
                                     </div>
+                                </div>
+                    
+                    
+                    
+                    
+                    
+                    
                             </div>
-
-                            
-
-                            
-
-
                         </div>
-                    </div>
-
-                    <!-- pack 4 royale -->
-
-                    <div class="package">
-                        <div class="pack-head">
-                            <h5>Royale Package</h5>
-                            <h4> Rs.2,440/sq.ft (Incl. GST)</h4>
-                        </div>
-                        <div class="packagedetails">
-
-                            <div class="details">
-                                <div class="label">• Designs & Drawings</div>
+                    
+                        <!-- pack 4 royale -->
+                        <div class="package">
+                            <div class="pack-head">
+                                <h5>Royale Package</h5>
+                                <h4> Rs.2,440/sq.ft (Incl. GST)</h4>
+                            </div>
+                            <div class="packagedetails">
+                    
+                                <div class="details">
+                                    <div class="label">• Designs & Drawings</div>
                                     <div class="content">
-                                    <p> Architectural Layout | 2D </p>
-                                    <p> Basic Elevation </p>
-                                    <p> Structural Design </p>    
-                                    <p>3D Elevation</p>     
-                                    <p>Electrical Drawings</p>
-                                    <p>Plumbing Drawings</p>
-                                    <p>Furniture Plan</p>
+                                        <p> Architectural Layout | 2D </p>
+                                        <p> Basic Elevation </p>
+                                        <p> Structural Design </p>
+                                        <p>3D Elevation</p>
+                                        <p>Electrical Drawings</p>
+                                        <p>Plumbing Drawings</p>
+                                        <p>Furniture Plan</p>
                                     </div>
-                                
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Bathroom</div>
+                    
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Bathroom</div>
                                     <div class="content">
                                         <p> Ceramic Wall Dado upto 7' height- Upto Rs.90 per Sqft</p>
                                         <p> Sanitarywares & CP fittings upto Rs. 80,000 per 1000 Sqft of Kohler make</p>
-                                        <p> CPVC Pipe -  Ashirwad or Supreme or Equivalent</p>
+                                        <p> CPVC Pipe - Ashirwad or Supreme or Equivalent</p>
                                         <p> Bathroom doors - Waterproof flush doors or WPC</p>
                                         <p>Mirror, Soap Dish, Towel Rail - Worth Rs. 9,000 till 1000 ft of Construction</p>
                                         <p>Solar water heater provision</p>
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">•  Structure</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Structure</div>
                                     <div class="content">
-                                        
+                    
                                         <p>Steel - Vizag or equivalent</p>
                                         <p> Cement - Ultratech or equivalent of 43 or 53 grade</p>
-                                        <p>  Aggregates - 20mm & 40mm</p>
-                                        <p> Blocks - Standard Red Bricks. 9 inch & 4 inch </p>   
-                                        <p> RCC Design Mix -ACC or Ultratech M25 or As per the structural designer recommendation</p>     
-                                        <p> Ceiling Height - 10 feet (Finished Floor level to Finished Floor level)</p> 
+                                        <p> Aggregates - 20mm & 40mm</p>
+                                        <p> Blocks - Standard Red Bricks. 9 inch & 4 inch </p>
+                                        <p> RCC Design Mix -ACC or Ultratech M25 or As per the structural designer recommendation
+                                        </p>
+                                        <p> Ceiling Height - 10 feet (Finished Floor level to Finished Floor level)</p>
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Doors & Windows</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Doors & Windows</div>
                                     <div class="content">
                                         <p> Windows - UPVC Windows with
                                             glass and mesh shutters (3 track
@@ -605,42 +605,42 @@
                                             upto Rs.13,000 including fixtures.
                                             Door Frames of Sal Wood 4 inch
                                             by 3 inch.
-                                            </p>
+                                        </p>
                                         <p> 1 Pooja Room Door - Burma Teak
                                             along with Teak frame of 5inch by
                                             2.5 inch, worth Rs. 35,000 for
                                             every 2,000 sft package area</p>
-                                        
+                    
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">•  Kitchen</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Kitchen</div>
                                     <div class="content">
                                         <p> Ceramic Wall Dado - Upto Rs.90 per Sqft</p>
-                                        <p> Main Sink Faucet - Upto Rs.3500 
+                                        <p> Main Sink Faucet - Upto Rs.3500
                                             Any other Faucet or Accessories -ISI Marked</p>
                                         <p> Kitchen Sink of Stainless Steel or granite
                                             Finish worth Rs. 8,000 (Futura, Carysil)</p>
-                                        
-                                        
+                    
+                    
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Painting</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Painting</div>
                                     <div class="content">
                                         <p> Interior Painting - JK Putty + Royale Luxury Emulsion or equivalent</p>
-                                            
+                    
                                         <p> Exterior Painting - Asian Primer +
                                             Apex Ultima Exterior emulsion Paint or
                                             equivalent</p>
-                                    
+                    
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Flooring</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Flooring</div>
                                     <div class="content">
                                         <p> Living & Dining Flooring - Tiles or
                                             Granite or Marble of value upto Rs.160
@@ -653,54 +653,50 @@
                                         <p> Staircase Flooring - Sadarahalli Granite
                                             of value upto ₹ 140 per sqft</p>
                                         <p>Parking Tiles - Anti-skid tiles of value
-                                            upto ₹ 70 per sqft</p>   
-                                        
+                                            upto ₹ 70 per sqft</p>
+                    
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">•  Electrical</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Electrical</div>
                                     <div class="content">
                                         <p> Wires - Fireproof wires by Finolex</p>
                                         <p>Switches & Sockets- Legrand
                                             Myrius or equivalent</p>
                                         <p>UPS Wiring Provision</p>
                                         <p>1 EV Charging Point at Groundfloor</p>
-
-                                        
+                    
+                    
                                     </div>
-                            </div>
-
-                            <div class="details">
-                                <div class="label">• Miscellaneous</div>
+                                </div>
+                    
+                                <div class="details">
+                                    <div class="label">• Miscellaneous</div>
                                     <div class="content">
                                         <p> Overhead Tank - Double Layered
                                             tank of 2000 Ltrs of Sintex / Apollo
                                             make</p>
                                         <p>Underground Sump - 8000 Ltrs</p>
                                         <p> Staircase Railing - SS (Stainless)
-                                        Glass Railing of SS 304 grade profiles</p>
+                                            Glass Railing of SS 304 grade profiles</p>
                                         <p>Window Grills - Basic MS Grill with
-                                            enamel Paint at Rs. 180 per Sqft</p>    
+                                            enamel Paint at Rs. 180 per Sqft</p>
                                         <p>1 Copper gas connection for
                                             every dwelling unit of 1,500 sft
                                             package area
-                                            </p>
-                                    
+                                        </p>
+                    
                                     </div>
+                                </div>
                             </div>
-
                         </div>
+
                     </div>
-
                 </div>
-
             </div>
-
-        </div>
-
+        </div>    
     </div>
-
     <!-- footer -->
     <footer>
         <div class="footer-container">
@@ -773,15 +769,15 @@
         </div>
     </footer>
 
-<script>
-    const packagedetails=document.getElementsByClassName('details');
+
+<script src="navbar.js"></script>
+<script src="modal.js"></script>
+<script> const packagedetails=document.getElementsByClassName('details');
     for(i=0;i<packagedetails.length;i++){
         packagedetails[i].addEventListener('click',function(){
             this.classList.toggle('active');
         })
-    }
-</script>
-<script src="navbar.js"></script>
+    }</script>
 </body>
 </html>
 
