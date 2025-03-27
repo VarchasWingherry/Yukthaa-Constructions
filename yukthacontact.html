@@ -62,58 +62,64 @@
     
 
     <!--contact-->
-    <div class="main-con">
+    <div class="content-of-page">
+      <div class="main-con">
         <h1>contact us</h1>
-    <div class="container">
-        
-        <div class="content">
-          <div class="left-side">
-            
-            <div class="phone details">
-              <i class="fas fa-phone-alt"></i>
-              <div class="topic">Phone</div>
-              <div class="text-one">+91 9985752406</div>
-              <div class="text-one">+91 4040174113</div>
-              <div class="text-one">+91 9966534942</div>
-
-            </div>
-            <div class="email details">
-              <i class="fas fa-envelope"></i>
-              <div class="topic">Email</div>
-              <div class="text-one">contactus@yukthaa.com</div>
+        <div class="container">
+          
+          <div class="content">
+            <div class="left-side">
               
+              <div class="phone details">
+                <i class="fas fa-phone-alt"></i>
+                <div class="topic">Phone</div>
+                <div class="text-one">+91 9985752406</div>
+                <div class="text-one">+91 4040174113</div>
+                <div class="text-one">+91 9966534942</div>
+  
+              </div>
+              <div class="email details">
+                <i class="fas fa-envelope"></i>
+                <div class="topic">Email</div>
+                <div class="text-one">contactus@yukthaa.com</div>
+                
+              </div>
+              <div class="address details">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="topic">Address</div>
+                <div class="text-one">Dwaraka Mindspace Plot No. 28, Survey No.8 & 9, Gafoornagar, </div>
+                <div class="text-two">Hitech City, Near Westin Hotel, Hyderabad, Telangana - 500081</div>
+              </div>
             </div>
-            <div class="address details">
-              <i class="fas fa-map-marker-alt"></i>
-              <div class="topic">Address</div>
-              <div class="text-one">Dwaraka Mindspace Plot No. 28, Survey No.8 & 9, Gafoornagar, </div>
-              <div class="text-two">Hitech City, Near Westin Hotel, Hyderabad, Telangana - 500081</div>
-            </div>
+            <div class="right-side">
+              <div class="topic-text"><h3>Send us a message</h3></div>
+              <p>Yuktha - Leading Home & Commercial Construction Company in Hyderabad Who Offers End-To-End Home Solutions, With 50+ Projects Delivered in AP& Telangana.</p>
+              <form action="#" onsubmit="return validateForm()">
+                <div class="input-box">
+                  <input type="text" id="name" placeholder="Enter your name">
+                  <span class="error" id="nameError" style="color:red; display:none;">Please enter your name.</span>
+                </div>
+                <div class="input-box">
+                  <input type="text" id="email" placeholder="Enter your email">
+                  <span class="error" id="emailError" style="color:red; display:none;">Please enter your email.</span>
+                </div>
+                <div class="input-box message-box">
+                  <textarea id="message" name="message" placeholder="Enter message" cols="30" rows="4"></textarea>
+                  <span class="error" id="messageError" style="color:red; display:none;">Please enter a message.</span>
+                  <span class="error" id="wordLimitError" style="color:red; display:none;">Message cannot exceed 120 words.</span>
+                </div>
+                <div class="button1">
+                  <button type="submit" value="Send Now">Send Now</button>
+                </div>
+              </form>
+              
           </div>
-          <div class="right-side">
-            <div class="topic-text"><h3>Send us a message</h3></div>
-            <p>Yuktha - Leading Home & Commercial Construction Company in Hyderabad Who Offers End-To-End Home Solutions, With 50+ Projects Delivered in AP& Telangana.</p>
-          <form action="#">
-            <div class="input-box">
-              <input type="text" placeholder="Enter your name">
-            </div>
-            <div class="input-box">
-              <input type="text" placeholder="Enter your email">
-            </div>
-            <div class="input-box message-box">
-              <textarea name="message" placeholder="Enter message" cols="30" rows="10"></textarea>
-            </div>
-            <div class="button1">
-              <input type="button" value="Send Now" >
-            </div>
-          </form>
+          </div>
         </div>
+        <div class="mapvid">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d60902.18388558545!2d78.382881!3d17.441206!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93e1c0d4db95%3A0x6f818b31479986f7!2sDwaraka%20Mindspace!5e0!3m2!1sen!2sin!4v1713434124720!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <img src="dwaraka.jpg" alt="">
         </div>
-      </div>
-      <div class="mapvid">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d60902.18388558545!2d78.382881!3d17.441206!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93e1c0d4db95%3A0x6f818b31479986f7!2sDwaraka%20Mindspace!5e0!3m2!1sen!2sin!4v1713434124720!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <img src="dwaraka.jpg" alt="">
-    </div>
     </div>
 
     <!--footer-->
@@ -188,5 +194,6 @@
       </div>
   </footer>  
   <script src="navbar.js"></script>
+  <script src="contact.js"></script>
 </body>
 </html>
