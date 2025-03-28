@@ -278,8 +278,9 @@ font-weight: 600;
     border-radius: 45px 0 45px 0;
     margin: 5px;
 }
-
-/* Footer Container */
+#yukthaConstructionsfooter{
+    cursor: pointer;
+}
 .footer-container {
     /* max-width: 1200px; */
     width: 92%;

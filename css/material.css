@@ -65,6 +65,7 @@
     justify-content: center;
     align-items: center;
     padding-top: 83px;
+    overflow-y: auto;
 }
 
 /* Modal Content */
@@ -73,12 +74,14 @@
     max-width: 600px;
     width: 100%;
     margin: 10px;
+    margin-top:95px;
     padding: 20px;
     padding-bottom: 5px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     position: relative;
     animation: fadeIn 0.3s ease-in-out;
+    overflow-y: auto;
 }
 
 /* Close Button */
@@ -146,6 +149,18 @@
 
 .quote-submit-btn:hover {
     background: #0056b3;
+}
+.error-msg {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+.success-msg {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
 }
 
 /* Fade-in Animation */
