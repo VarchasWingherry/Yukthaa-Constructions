@@ -71,35 +71,39 @@
         <div class="forms-container">
           <div class="signin-signup">
             <form action="#" class="sign-in-form">
-              <h2 class="title">Sign in</h2>
-                  <div class="input-field">
-                      <i class="fa-solid fa-envelope"></i>
-                      <input type="text" placeholder="Email" />
-                  </div>
-                  <div class="input-field">
-                      <i class="fas fa-lock"></i>
-                      <input type="number" placeholder="Password" />
-                  </div>
-                  <p>Forgot your password? <span class="forpwd-forgot-password-link" onclick="openModal()">Click here</span></p>
-                  <input type="submit" value="Login" class="btn solid" />
-                  <p class="social-text">Or Sign in with social platforms</p>
-                  <div class="social-media">
-                      <a href="#" class="social-icon">
-                          <i class="fab fa-facebook-f"></i>
-                      </a>
-                      <a href="#" class="social-icon">
-                        <i class="fa-brands fa-x-twitter"></i>
-                      </a>
-                      <a href="#" class="social-icon">
-                          <i class="fab fa-google"></i>
-                      </a>
-                      <a href="#" class="social-icon">
-                          <i class="fab fa-linkedin-in"></i>
-                      </a>
-                  </div>
-                  <a class="back-home" href="../html/yukthahome.html">Back to Home</a>
-            </form>
-          
+                <h2 class="title">Sign in</h2>
+              
+                <div class="input-field">
+                  <i class="fa-solid fa-envelope"></i>
+                  <input type="text" id="signInEmail" placeholder="Email" />
+                </div>
+                <span class="error-msg" id="emailError"></span>
+              
+                <div class="input-field">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" id="signInPassword" placeholder="Password" />
+                  <i class="fa-solid fa-eye" id="togglePassword"></i>
+                </div>
+                <span class="error-msg" id="passwordError"></span>
+              
+                <p class="forgotpasssection">Forgot your password? <span class="forpwd-forgot-password-link" onclick="openModal()">Click here</span></p>
+              
+                <button type="button" class="btn solid">Login</button>
+              
+                <p class="social-text">Or Sign in with social platforms</p>
+              
+                <div class="social-media">
+                  <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              
+                <a class="back-home" href="../html/yukthahome.html">Back to Home</a>
+              
+                <p class="success-msg" id="successMessage"></p>
+              </form>
+              
         </div>
         </div>
         

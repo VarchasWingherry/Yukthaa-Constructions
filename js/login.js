@@ -1,110 +1,100 @@
-const sign_in_btn = document.querySelector("#sign-in-btn");
-const sign_up_btn = document.querySelector("#sign-up-btn");
-const container = document.querySelector(".container");
+document.addEventListener("DOMContentLoaded", function () {
+  const loginForm = document.querySelector(".sign-in-form");
+  const loginButton = document.querySelector(".btn.solid");
+  const passwordInput = document.getElementById("signInPassword");
+  const togglePassword = document.getElementById("togglePassword");
 
-sign_up_btn.addEventListener("click", () => {
-  container.classList.add("sign-up-mode");
-});
+  loginButton.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent form submission
 
-sign_in_btn.addEventListener("click", () => {
-  container.classList.remove("sign-up-mode");
-});
+    const email = document.getElementById("signInEmail").value.trim();
+    const password = passwordInput.value.trim();
 
+    let isValid = true;
 
-//  Form validation for Sign Up
-const form = document.getElementsByClassName('sign-up-form');
+    // Validate Email
+    if (!validateEmail(email)) {
+      isValid = false;
+    }
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
+    // Validate Password
+    if (!validatePassword(password)) {
+      isValid = false;
+    }
 
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
-  const otp = document.getElementById('otp').value;
+    // Submit form if valid
+    if (isValid) {
+      document.getElementById("successMessage").textContent = "Login successful!";
+      document.getElementById("successMessage").style.color = "green";
+      loginForm.submit();
+    }
+  });
 
-  if (validateName(name) && validateEmail(email) && validatePhone(phone) && validateOTP(otp)) {
-    // Form is valid, submit it to the server
-    form.submit();
+  // Toggle password visibility
+  togglePassword.addEventListener("click", function () {
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      togglePassword.classList.remove("fa-eye");
+      togglePassword.classList.add("fa-eye-slash");
+    } else {
+      passwordInput.type = "password";
+      togglePassword.classList.remove("fa-eye-slash");
+      togglePassword.classList.add("fa-eye");
+    }
+  });
+
+  function validateEmail(email) {
+    const errorElement = document.getElementById("emailError");
+    errorElement.textContent = "";
+
+    if (email === "") {
+      errorElement.textContent = "Email is required.";
+      return false;
+    }
+
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!regex.test(email)) {
+      errorElement.textContent = "Enter a valid email address.";
+      return false;
+    }
+
+    return true;
+  }
+
+  function validatePassword(password) {
+    const errorElement = document.getElementById("passwordError");
+    errorElement.textContent = "";
+
+    if (password === "") {
+      errorElement.textContent = "Password is required.";
+      return false;
+    }
+
+    if (password.length < 6) {
+      errorElement.textContent = "Password must be at least 6 characters.";
+      return false;
+    }
+
+    if (!/[A-Z]/.test(password)) {
+      errorElement.textContent = "Password must contain at least one uppercase letter.";
+      return false;
+    }
+
+    if (!/[a-z]/.test(password)) {
+      errorElement.textContent = "Password must contain at least one lowercase letter.";
+      return false;
+    }
+
+    if (!/\d/.test(password)) {
+      errorElement.textContent = "Password must contain at least one number.";
+      return false;
+    }
+
+    if (!/[!@#$%^&*]/.test(password)) {
+      errorElement.textContent = "Password must contain at least one special character (!@#$%^&*).";
+      return false;
+    }
+
+    return true;
   }
 });
-
-function validateName(name) {
-  // Check if name is not empty
-  if (name.trim() === '') {
-    alert('Name is required');
-    return false;
-  }
-
-  // Check if name contains only letters and spaces
-  const regex = /^[a-zA-Z\s]+$/;
-  if (!regex.test(name)) {
-    alert('Name must contain only letters and spaces');
-    return false;
-  }
-
-  return true;
-}
-
-function validateEmail(email) {
-  // Check if email is not empty
-  if (email.trim() === '') {
-    alert('Email is required');
-    return false;
-  }
-
-  // Check if email is valid
-  const regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
-  if (!regex.test(email)) {
-    alert('Email is not valid');
-    return false;
-  }
-
-  return true;
-}
-
-function validatePhone(phone) {
-  // Check if phone is not empty
-  if (phone.trim() === '') {
-    alert('Phone is required');
-    return false;
-  }
-
-  // Check if phone is 10 digits
-  if (phone.length !== 10) {
-    alert('Phone must be 10 digits');
-    return false;
-  }
-
-  // Check if phone contains only numbers
-  const regex = /^\d+$/;
-  if (!regex.test(phone)) {
-    alert('Phone must contain only numbers');
-    return false;
-  }
-
-  return true;
-}
-
-function validateOTP(otp) {
-  // Check if OTP is not empty
-  if (otp.trim() === '') {
-    alert('OTP is required');
-    return false;
-  }
-
-  // Check if OTP is 6 digits
-  if (otp.length !== 6) {
-    alert('OTP must be 6 digits');
-    return false;
-  }
-
-  // Check if OTP contains only numbers
-  const regex = /^\d+$/;
-  if (!regex.test(otp)) {
-    alert('OTP must contain only numbers');
-    return false;
-  }
-
-  return true;
-}
-
