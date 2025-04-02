@@ -57,7 +57,7 @@ function validateForm() {
 
     // Check Phone (10 digits)
     let phone = document.getElementById('connect-phone').value;
-    let phoneRegex = /^\d{10}$/; // Regex to match exactly 10 digits
+    let phoneRegex = /^[6-9]\d{9}$/; // Regex to match phone number starting with 6, 7, 8, or 9 and followed by 9 digits
     if (phone.trim() === '') {
       document.getElementById('phone-error').style.display = 'block';
       isValid = false;
@@ -65,6 +65,7 @@ function validateForm() {
       document.getElementById('phone-format-error').style.display = 'block';
       isValid = false;
     }
+
 
     // Check File Upload
     let file = document.getElementById('connect-file').value;
