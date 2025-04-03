@@ -55,14 +55,22 @@ html{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 30px;
   width: 100%;
-  height: max-content;
+  /* height: max-content; */
 }
 .column .container{
-  max-width: 600px;
-  width: 100%;
+  max-width: 100%;
+  width: 45%;
+  max-height: 100%;
+  /* margin: 0 auto; */
+}
+@media (max-width: 768px) {
+  .column .container {
+    max-width: 580px; 
+    width: 100%;
+  }
 }
 .profile {
   margin: 0 auto;
@@ -78,7 +86,7 @@ html{
     color: green;
   }
   .profile h1{
-    width: 50%;
+    width: 60%;
     font-size: 20px;
     color: var(--orange-color);
     margin-bottom: 10px;
